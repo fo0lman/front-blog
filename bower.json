@@ -1,0 +1,21 @@
+{
+  "name": "front-blog",
+  "version": "0.0.1",
+  "authors": [
+    "fo0lman <foolman.sy@gmail.com>"
+  ],
+  "description": "foolman blog @angular",
+  "main": "index.html",
+  "moduleType": [
+    "amd",
+    "es6"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
