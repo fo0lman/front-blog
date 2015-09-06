@@ -22,11 +22,16 @@
   },
   "dependencies": {
     "angular": "^1.4.5",
+    "angular-route": "^1.4.5",
+    "angular-spinner": "git+https://github.com/urish/angular-spinner.git",
+    "angular-ui-router": "^0.2.15",
     "angularfire": "^1.1.2",
     "bootstrap": "^3.3.5",
-    "firebase": "^2.2.8",
+    "font-awesome": "git+https://github.com/FortAwesome/Font-Awesome.git",
     "jquery": "^2.1.4",
-    "jquery-ui": "^1.10.5"
+    "jquery-ui": "^1.10.5",
+    "simple-line-icons": "^1.0.0",
+    "spin.js": "git+https://github.com/fgnass/spin.js.git"
   },
   "author": "foolman",
   "license": "MIT"
