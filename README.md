@@ -1,2 +1,4 @@
 # front-blog
-frontend blog (angular)
+frontend blog (webpack, angular, es2015)
+
+latest version on "develop" branch.
