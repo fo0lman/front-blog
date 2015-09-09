@@ -1,2 +1,3 @@
-# Front-blog
-frontend blog (webpack, angular, es2015)
+# Front Blog
+
+Angular webpack es2015

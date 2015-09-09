@@ -1,6 +1,6 @@
 {
   "name": "front-blog",
-  "version": "0.0.1",
+  "version": "0.2.1",
   "authors": [
     "fo0lman <foolman.sy@gmail.com>"
   ],
@@ -17,8 +17,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "firebase": "~2.2.9"
-  }
+  ]
 }

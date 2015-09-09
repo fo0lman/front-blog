@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="front-blog-app">
+<html lang="en" data-ng-app="FrontBlog">
 <head>
-    <!--<base href="/front-blog/app/">-->
+    <base href="/">
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Фронт блог</title>
+    <title>Front Blog</title>
 
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,32 +18,22 @@
     <meta name="msapplication-TileImage" content="img/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="icon" sizes="192x192" href="img/chrome-touch-icon-192x192.png">
-    <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png">
-
-    <link rel="stylesheet" href="../node_modules/jquery-ui/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="../node_modules/simple-line-icons/css/simple-line-icons.css">
-    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
-
-    <link rel='stylesheet' href='css/gfonts.css'>
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="icon" sizes="192x192" href="assets/img/chrome-touch-icon-192x192.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon-precomposed.png">
 
 </head>
 <body>
 <div class="wrapper">
     <div class="header">
         <div class="container">
-            <a class="logo" href="#/">
-                <img src="img/logo1-default.png" alt="Logo">
+            <a class="logo" href="/">
+                <img src="assets/img/logo1-default.png" alt="Logo">
             </a>
 
             <div class="topbar">
                 <ul class="loginbar pull-right">
-                    <li class="hoverSelector"><a href="#/posts/add"><i class="fa fa-plus"></i> Add</a></li>
+                    <li class="hoverSelector"><a href="/post/add"><i class="fa fa-plus"></i> Add</a></li>
                 </ul>
             </div>
         </div>
@@ -51,10 +41,10 @@
 
     <span data-us-spinner data-spinner-key="spinner"></span>
 
-    <div class="container content" data-ng-controller="PostListCtrl">
+    <div class="container content">
         <div class="row blog-page">
             <div class="col-md-9">
-                <div data-ng-view></div>
+                <div data-ui-view></div>
             </div>
             <div class="col-md-3 magazine-page">
                 <div class="headline headline-md"><h2>Search</h2></div>
@@ -67,7 +57,7 @@
                 <div class="posts margin-bottom-40">
                     <div class="headline headline-md"><h2>Latest Posts</h2></div>
                     <dl class="dl-horizontal">
-                        <dt><a href="#"><img src="img/6.jpg" alt=""/></a></dt>
+                        <dt><a href="#"><img src="assets/img/6.jpg" alt=""/></a></dt>
                         <dd>
                             <p><a href="#">Responsive Bootstrap 3 Template placerat idelo alac eratamet.</a></p>
                         </dd>
@@ -75,14 +65,14 @@
                 </div>
                 <div class="headline headline-md"><h2>Photo Stream</h2></div>
                 <ul class="list-unstyled blog-photos margin-bottom-30">
-                    <li><a href="#"><img class="hover-effect" alt="" src="img/5.jpg"></a></li>
-                    <li><a href="#"><img class="hover-effect" alt="" src="img/6.jpg"></a></li>
-                    <li><a href="#"><img class="hover-effect" alt="" src="img/8.jpg"></a></li>
-                    <li><a href="#"><img class="hover-effect" alt="" src="img/10.jpg"></a></li>
-                    <li><a href="#"><img class="hover-effect" alt="" src="img/11.jpg"></a></li>
-                    <li><a href="#"><img class="hover-effect" alt="" src="img/1.jpg"></a></li>
-                    <li><a href="#"><img class="hover-effect" alt="" src="img/2.jpg"></a></li>
-                    <li><a href="#"><img class="hover-effect" alt="" src="img/7.jpg"></a></li>
+                    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/5.jpg"></a></li>
+                    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/6.jpg"></a></li>
+                    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/8.jpg"></a></li>
+                    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/10.jpg"></a></li>
+                    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/11.jpg"></a></li>
+                    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/1.jpg"></a></li>
+                    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/2.jpg"></a></li>
+                    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/7.jpg"></a></li>
                 </ul>
                 <div class="headline headline-md"><h2>Blog Tags</h2></div>
                 <ul class="list-unstyled blog-tags margin-bottom-30">
@@ -109,7 +99,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 md-margin-bottom-40">
-                        <a href="index.html"><img id="logo-footer" class="footer-logo" src="img/logo2-default.png" alt=""></a>
+                        <a href="index.html"><img id="logo-footer" class="footer-logo" src="assets/img/logo2-default.png" alt=""></a>
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis harum itaque laborum mollitia odit veniam!</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum explicabo fugiat inventore officia quam, quibusdam!</p>
@@ -137,11 +127,11 @@
                     <div class="col-md-3 md-margin-bottom-40">
                         <div class="headline"><h2>Useful Links</h2></div>
                         <ul class="list-unstyled link-list">
-                            <li><a href="#/about">About</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="/about">About</a><i class="fa fa-angle-right"></i></li>
                             <li><a href="https://github.com/fo0lman" target="_blank">Code samples</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#/latestjobs">Latest jobs</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="/latest-jobs">Latest jobs</a><i class="fa fa-angle-right"></i></li>
                             <li><a href="http://habrahabr.ru/posts/frontend/" target="_blank">Community</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="#/contacts">Contacts</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="/contacts">Contacts</a><i class="fa fa-angle-right"></i></li>
                         </ul>
                     </div>
                     <div class="col-md-3 map-img md-margin-bottom-40">
@@ -160,7 +150,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>2015 &copy; All Rights Reserved. <a href="#/privacy-policy">Privacy Policy</a>
+                        <p>2015 &copy; All Rights Reserved. <a href="/privacy-policy">Privacy Policy</a>
                         </p>
                     </div>
                     <div class="col-md-6">
@@ -209,24 +199,5 @@
     </div>
 </div>
 
-<script src="../node_modules/angular/angular.js"></script>
-<script src="../node_modules/angular-route/angular-route.js"></script>
-<script src="../bower_components/firebase/firebase.js"></script>
-<script src="../node_modules/angularfire/dist/angularfire.js"></script>
-<script src="../node_modules/spin.js/spin.js"></script>
-<script src="../node_modules/angular-spinner/angular-spinner.js"></script>
-<script src="js/core.js"></script>
-<script src="js/config.js"></script>
-<script src="js/controllers/PostsCtrl.js"></script>
-<script src="js/controllers/AboutCtrl.js"></script>
-<script src="js/controllers/ContactsCtrl.js"></script>
-<script src="js/controllers/PostDetailCtrl.js"></script>
-<script src="js/controllers/ActionFormCtrl.js"></script>
-<script src="js/controllers/LatestJobsCtrl.js"></script>
-<script src="js/controllers/PrivacyPolicyCtrl.js"></script>
-
-
-<script src="../node_modules/jquery/dist/jquery.js"></script>
-<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
