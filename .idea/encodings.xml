@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/.gitignore" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/about/about.ctrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/about/about.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/about/about.routes.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/about/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/actions/actions.routes.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/actions/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/contacts/contacts.routes.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/contacts/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/latest-jobs/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/latest-jobs/latest-jobs.routes.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/post/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/post/post.routes.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/privacy-policy/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/privacy-policy/privacy-policy.routes.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/package.json" charset="UTF-8" />
+  </component>
+</project>
