@@ -4,9 +4,13 @@ routes.$inject = ['$stateProvider'];
 
 export default function routes($stateProvider) {
     $stateProvider
-        .state('privacy-policy', {
+        .state('frontblog.privacy-policy', {
             url: '/privacy-policy',
-            template: require('./privacy-policy.html'),
+            views: {
+                'content@': { template: require('./privacy-policy.html') }
+
+            }
+            ,
             controller: 'PrivacyPolicyCtrl',
             controllerAs: 'privacyPolicy'
         });

@@ -3,11 +3,16 @@
 routes.$inject = ['$stateProvider'];
 
 export default function routes($stateProvider) {
-  $stateProvider
-    .state('home', {
-      url: '/',
-      template: require('./home.html'),
-      controller: 'HomeCtrl',
-      controllerAs: 'home'
-    });
+    $stateProvider
+        .state('frontblog.home', {
+            url: '/',
+            parent: 'frontblog',
+            views: {
+                'content@': {template: require('./home.html') }
+
+            }
+            ,
+            controller: 'HomeCtrl',
+            controllerAs: 'home'
+        });
 }

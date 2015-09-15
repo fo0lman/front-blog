@@ -1,10 +1,17 @@
 'use strict';
 
-export default class AboutCtrl {
-  constructor() {
-    
-  }
-
+class AboutCtrl {
+    constructor($scope, $state){
+        this.$state= $state;
+        this.scope=$scope;
+        this.scope.Text = "Hello, man!";
+        this.init();
+    }
+    init(){
+        console.log('test init');
+    }
 }
 
-//AboutCtrl.$inject = [''];
+AboutCtrl.$inject=['$scope',  '$state'];
+
+export {AboutCtrl}

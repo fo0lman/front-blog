@@ -4,9 +4,13 @@ routes.$inject = ['$stateProvider'];
 
 export default function routes($stateProvider) {
     $stateProvider
-        .state('view', {
+        .state('frontblog.view', {
             url: '/post/view/:postId',
-            template: require('./post.html'),
+            views: {
+                'content@': { template: require('./post.html') }
+
+            }
+           ,
             controller: 'PostCtrl',
             controllerAs: 'post'
         });

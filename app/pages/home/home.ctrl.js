@@ -2,12 +2,13 @@
 
 export default class HomeCtrl {
     constructor($firebaseArray, $firebaseAuth) {
-        this.$firebaseArray = $firebaseArray;
-        this.$firebaseAuth = $firebaseAuth;
-        let ref = new Firebase("https://front-blog.firebaseio.com/");
-        var postsRef = ref.child('posts');
-        this.posts = this.$firebaseArray(postsRef);
-        this.auth = this.$firebaseAuth(ref);
+        //this.$firebaseArray = $firebaseArray;
+        //this.$firebaseAuth = $firebaseAuth;
+        //let ref = new Firebase("https://front-blog.firebaseio.com/");
+        //var postsRef = ref.child('posts');
+        //this.posts = this.$firebaseArray(postsRef);
+        //this.auth = this.$firebaseAuth(ref);
+        console.log('TEST');
     }
 
     authGoogle() {

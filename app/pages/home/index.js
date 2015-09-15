@@ -9,7 +9,7 @@ import HomeCtrl from './home.ctrl';
 import Firebase from 'firebase';
 import angularfire from 'angularfire';
 
-export default angular.module('FrontBlog.homePage', [uirouter, angularfire])
+export default angular.module('homePage', [uirouter, angularfire])
     .config(routing)
     .controller('HomeCtrl', HomeCtrl)
     .name;
