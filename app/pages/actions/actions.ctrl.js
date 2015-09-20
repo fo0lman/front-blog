@@ -1,61 +1,60 @@
 'use strict';
 
-export default class ActionsCtrl {
-    constructor() {
+class ActionsCtrl {
+    constructor($scope, $state, $stateParams, $firebaseObject, $firebaseArray) {
+        this.scope = $scope;
+        this.state = $state;
+        this.postId = $stateParams.postId;
+        this.firebaseObject = $firebaseObject;
+        this.firebaseArray = $firebaseArray;
+        this.ref = new Firebase("https://front-blog.firebaseio.com/");
 
+        if (this.postId) {
+            this.editPost();
+        } else {
+            this.addPost();
+        }
     }
 
+    editPost() {
+        this.actionTitle = 'Edit Post';
+        let postRef = this.ref.child('posts').child(this.postId);
+        this.scope.formData = this.firebaseObject(postRef);
+    }
+
+    addPost() {
+        this.actionTitle = 'Create Post';
+        let postsRef = this.ref.child('posts');
+        this.posts =  this.firebaseArray(postsRef);
+        this.scope.formData = {
+            imageUrl: 'assets/img/no-image-available.jpg',
+            title: '',
+            date: (new Date()).getTime(),
+            author: 'admin',
+            keywords: '',
+            description: ''
+        };
+    }
+    submitForm() {
+        if (this.postId) {
+            let self = this;
+            this.scope.formData.$save().then(function () {
+                console.info('SUCCESS EDITING!!!');
+                self.state.go('frontblog.home');
+            }, function (error) {
+                console.log("Error:", error);
+            });
+        } else {
+            let self = this;
+            this.posts.$add(this.scope.formData).then(function(ref) {
+               var id = ref.key();
+                console.log("added record with id " + id);
+                self.state.go('frontblog.home');
+            });
+        }
+    }
 }
 
-//ActionsCtrl.$inject = [''];
+ActionsCtrl.$inject = ['$scope', '$state', '$stateParams', '$firebaseObject', '$firebaseArray'];
 
-//FrontBlog.controller('ActionFormCtrl', [
-//    '$scope',
-//    '$location',
-//    '$routeParams',
-//    '$firebaseObject',
-//
-//    function ($scope, $location, $routeParams, $firebaseObject) {
-//        var editPost = function () {
-//            $scope.actionTitle = 'Edit Post';
-//
-//            var postRef = $scope.ref.child('posts').child(postId);
-//
-//            $scope.formData = $firebaseObject(postRef);
-//
-//            $scope.submitForm = function () {
-//                $scope.formData.$save().then(function() {
-//                    $location.path('/');
-//                }, function(error) {
-//                    console.log("Error:", error);
-//                });
-//            };
-//        };
-//        var addPost = function () {
-//            $scope.actionTitle = 'Create Post';
-//
-//            $scope.formData = {
-//                imageUrl: 'img/no-image-available.jpg',
-//                title: '',
-//                date: (new Date()).getTime(),
-//                author: 'admin',
-//                keywords: '',
-//                description: ''
-//            };
-//
-//            $scope.submitForm = function () {
-//                $scope.posts.$add($scope.formData).then(function(ref) {
-//                    var id = ref.key();
-//                    console.log("added record with id " + id);
-//                    $location.path('/');
-//                });
-//            };
-//        };
-//        var postId = $routeParams.postId;
-//        if (postId) {
-//            editPost();
-//        } else {
-//            addPost();
-//        }
-//        window.scrollTo(0, 0);
-//    }]);
+export default ActionsCtrl;
