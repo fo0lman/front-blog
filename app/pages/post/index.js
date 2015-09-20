@@ -3,10 +3,13 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
-import routing from './post.routes';
+import routes from './post.routes';
 import PostCtrl from './post.ctrl';
 
-export default angular.module('FrontBlog.postPage', [uirouter])
-  .config(routing)
-  .controller('PostCtrl', PostCtrl)
-  .name;
+import Firebase from 'firebase';
+import angularfire from 'angularfire';
+
+export default angular.module('FrontBlog.postPage', [uirouter, angularfire])
+    .config(routes)
+    .controller('PostCtrl', PostCtrl)
+    .name;

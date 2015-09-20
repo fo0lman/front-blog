@@ -14,4 +14,4 @@ class AboutCtrl {
 
 AboutCtrl.$inject=['$scope',  '$state'];
 
-export {AboutCtrl}
+export default AboutCtrl;

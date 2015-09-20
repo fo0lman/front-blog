@@ -2,7 +2,7 @@
 
 routing.$inject = ['$urlRouterProvider', '$locationProvider', '$stateProvider'];
 
-export default function routing($urlRouterProvider, $locationProvider, $stateProvider) {
+function routing($urlRouterProvider, $locationProvider, $stateProvider) {
     $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
     $stateProvider
@@ -10,6 +10,9 @@ export default function routing($urlRouterProvider, $locationProvider, $statePro
             views: {
                 'header': {
                     template: require('./templates/header.html')
+                },
+                'content': {
+                    template: require('./templates/content.html')
                 },
                 'sidebar': {
                     template: require('./templates/sidebar.html')
@@ -20,3 +23,5 @@ export default function routing($urlRouterProvider, $locationProvider, $statePro
             }
         });
 }
+
+export default routing;

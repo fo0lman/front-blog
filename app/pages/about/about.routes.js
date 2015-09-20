@@ -1,16 +1,15 @@
 'use strict';
 
+routes.$inject = ['$stateProvider'];
+
 function routes($stateProvider) {
     $stateProvider
         .state('frontblog.about', {
             url: '/about',
-            views: {
-                'content@': { template: require('./about.html') }
-            },
-            controller: 'AboutCtrl'
+            template: require('./about.html'),
+            controller: 'AboutCtrl',
+            controllerAs: 'about'
         });
 }
 
-routes.$inject = ['$stateProvider'];
-
-export {routes};
+export default routes;

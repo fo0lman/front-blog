@@ -1,16 +1,14 @@
 'use strict';
 
-export default class HomeCtrl {
+class HomeCtrl {
     constructor($firebaseArray, $firebaseAuth) {
-        //this.$firebaseArray = $firebaseArray;
-        //this.$firebaseAuth = $firebaseAuth;
-        //let ref = new Firebase("https://front-blog.firebaseio.com/");
-        //var postsRef = ref.child('posts');
-        //this.posts = this.$firebaseArray(postsRef);
-        //this.auth = this.$firebaseAuth(ref);
-        console.log('TEST');
-    }
+        let ref = new Firebase("https://front-blog.firebaseio.com/");
+        let postsRef = ref.child('posts');
 
+        this.posts = $firebaseArray(postsRef);
+        this.auth = $firebaseAuth(ref);
+
+    }
     authGoogle() {
         this.auth.$authWithOAuthPopup("google").then(function (authData) {
             console.log("Logged in as:", authData.uid);
@@ -42,4 +40,9 @@ export default class HomeCtrl {
     logout() {
         this.auth.$unauth();
     }
+
 }
+
+HomeCtrl.$inject=['$firebaseArray', '$firebaseAuth'];
+
+export default HomeCtrl;

@@ -1,5 +1,9 @@
-.idea
-
+# Node
 node_modules
+npm-debug.log
 
-dist
+# MacOS
+.DS_STORE
+
+# JetBrains
+.idea

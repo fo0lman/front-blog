@@ -17,7 +17,9 @@ import latestJobs from './pages/latest-jobs/index';
 import post from './pages/post/index';
 import privacyPolicy from './pages/privacy-policy/index';
 
-import routing from './app.config';
+import routes from './app.config';
 
-angular.module('FrontBlog', [uirouter, home, about, actions, contacts, latestJobs, post, privacyPolicy])
-    .config(routing);
+var frontBlog = angular.module('FrontBlog', [uirouter, home, about, actions, contacts, latestJobs, post, privacyPolicy])
+    .config(routes);
+
+export default frontBlog;
