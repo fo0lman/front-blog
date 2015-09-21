@@ -3,7 +3,7 @@
         <div class="title-block">
             <h2>{{post.data.title}}</h2>
         </div>
-        <div class="action-block">
+        <div class="action-block" data-ng-show="post.authStatus">
             <a href="/posts/edit/{{post.data.$id}}"><i class="fa fa-pencil"></i></a>
         </div>
     </div>

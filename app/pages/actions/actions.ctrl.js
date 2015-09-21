@@ -1,13 +1,11 @@
 'use strict';
 
 class ActionsCtrl {
-    constructor($scope, $state, $stateParams, $firebaseObject, $firebaseArray) {
+    constructor($scope, $state, $stateParams, $database) {
         this.scope = $scope;
         this.state = $state;
         this.postId = $stateParams.postId;
-        this.firebaseObject = $firebaseObject;
-        this.firebaseArray = $firebaseArray;
-        this.ref = new Firebase("https://front-blog.firebaseio.com/");
+        this.database = $database;
 
         if (this.postId) {
             this.editPost();
@@ -18,14 +16,12 @@ class ActionsCtrl {
 
     editPost() {
         this.actionTitle = 'Edit Post';
-        let postRef = this.ref.child('posts').child(this.postId);
-        this.scope.formData = this.firebaseObject(postRef);
+        this.scope.formData = this.database.getPost(this.postId);
     }
 
     addPost() {
         this.actionTitle = 'Create Post';
-        let postsRef = this.ref.child('posts');
-        this.posts =  this.firebaseArray(postsRef);
+        this.posts =  this.database.getPosts();
         this.scope.formData = {
             imageUrl: 'assets/img/no-image-available.jpg',
             title: '',
@@ -39,7 +35,6 @@ class ActionsCtrl {
         if (this.postId) {
             let self = this;
             this.scope.formData.$save().then(function () {
-                console.info('SUCCESS EDITING!!!');
                 self.state.go('frontblog.home');
             }, function (error) {
                 console.log("Error:", error);
@@ -55,6 +50,6 @@ class ActionsCtrl {
     }
 }
 
-ActionsCtrl.$inject = ['$scope', '$state', '$stateParams', '$firebaseObject', '$firebaseArray'];
+ActionsCtrl.$inject = ['$scope', '$state', '$stateParams', '$database'];
 
 export default ActionsCtrl;

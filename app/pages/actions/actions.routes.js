@@ -2,7 +2,7 @@
 
 routes.$inject = ['$stateProvider'];
 
-export default function routes($stateProvider) {
+function routes($stateProvider) {
     $stateProvider
         .state('frontblog.add', {
             url: '/posts/add',
@@ -18,3 +18,5 @@ export default function routes($stateProvider) {
         })
     ;
 }
+
+export default routes;

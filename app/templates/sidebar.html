@@ -3,40 +3,20 @@
     <input type="text" id="searchInput" data-ng-model="searchQuery" class="form-control" placeholder="Search">
     <span class="input-group-btn"><button class="btn-u" id="searchBtn" type="button">Go</button></span>
 </div>
-<div class="posts margin-bottom-40">
+<div class="last-posts margin-bottom-40">
     <div class="headline headline-md"><h2>Latest Posts</h2></div>
-    <dl class="dl-horizontal">
-        <dt><a href="#"><img src="assets/img/6.jpg" alt=""/></a></dt>
+    <dl class="dl-horizontal" data-ng-repeat="lastpost in sdbar.lastPosts">
+        <dt><a href="/posts/view/{{lastpost.$id}}"><img data-ng-src="{{lastpost.imageUrl}}" alt="{{lastpost.title}}"></a></dt>
         <dd>
-            <p><a href="#">Responsive Bootstrap 3 Template placerat idelo alac eratamet.</a></p>
+            <p><a href="/posts/view/{{lastpost.$id}}">{{lastpost.title}}</a></p>
         </dd>
     </dl>
 </div>
 <div class="headline headline-md"><h2>Photo Stream</h2></div>
 <ul class="list-unstyled blog-photos margin-bottom-30">
-    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/5.jpg"></a></li>
-    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/6.jpg"></a></li>
-    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/8.jpg"></a></li>
-    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/10.jpg"></a></li>
-    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/11.jpg"></a></li>
-    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/1.jpg"></a></li>
-    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/2.jpg"></a></li>
-    <li><a href="#"><img class="hover-effect" alt="" src="assets/img/7.jpg"></a></li>
+    <li data-ng-repeat="photo in sdbar.photoStream"><a href="/posts/view/{{photo.$id}}"><img class="hover-effect" data-ng-src="{{photo.imageUrl}}" alt="{{photo.title}}"></a></li>
 </ul>
 <div class="headline headline-md"><h2>Blog Tags</h2></div>
 <ul class="list-unstyled blog-tags margin-bottom-30">
-    <li><a href="#"><i class="fa fa-tags"></i> Business</a></li>
-    <li><a href="#"><i class="fa fa-tags"></i> Music</a></li>
-    <li><a href="#"><i class="fa fa-tags"></i> Internet</a></li>
-    <li><a href="#"><i class="fa fa-tags"></i> Money</a></li>
-    <li><a href="#"><i class="fa fa-tags"></i> Google</a></li>
-    <li><a href="#"><i class="fa fa-tags"></i> TV Shows</a></li>
-    <li><a href="#"><i class="fa fa-tags"></i> Education</a></li>
-    <li><a href="#"><i class="fa fa-tags"></i> People</a></li>
-    <li><a href="#"><i class="fa fa-tags"></i> People</a></li>
-    <li><a href="#"><i class="fa fa-tags"></i> Math</a></li>
-    <li><a href="#"><i class="fa fa-tags"></i> Photos</a></li>
-    <li><a href="#"><i class="fa fa-tags"></i> Electronics</a></li>
-    <li><a href="#"><i class="fa fa-tags"></i> Apple</a></li>
-    <li><a href="#"><i class="fa fa-tags"></i> Canada</a></li>
+    <li data-ng-repeat="tag in sdbar.tags"><a href="#"><i class="fa fa-tags"></i> {{tag}}</a></li>
 </ul>

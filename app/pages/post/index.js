@@ -6,10 +6,11 @@ import uirouter from 'angular-ui-router';
 import routes from './post.routes';
 import PostCtrl from './post.ctrl';
 
-import Firebase from 'firebase';
-import angularfire from 'angularfire';
+import database from '../../modules/database';
 
-export default angular.module('FrontBlog.postPage', [uirouter, angularfire])
+var postPage = angular.module('postPage', [uirouter, database])
     .config(routes)
     .controller('PostCtrl', PostCtrl)
     .name;
+
+export default postPage;

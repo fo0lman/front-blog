@@ -1,6 +1,6 @@
 'use strict';
 
-export default class LatestJobsCtrl {
+class LatestJobsCtrl {
     constructor() {
 
     }
@@ -8,3 +8,5 @@ export default class LatestJobsCtrl {
 }
 
 //ContactsCtrl.$inject = [''];
+
+export default LatestJobsCtrl;

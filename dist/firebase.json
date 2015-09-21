@@ -1,0 +1,9 @@
+{
+  "firebase": "front-blog",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

@@ -1,6 +1,6 @@
 'use strict';
 
-export default class PrivacyPolicyCtrl {
+class PrivacyPolicyCtrl {
     constructor() {
 
     }
@@ -8,3 +8,5 @@ export default class PrivacyPolicyCtrl {
 }
 
 //PrivacyPolicyCtrl.$inject = [''];
+
+export default PrivacyPolicyCtrl;

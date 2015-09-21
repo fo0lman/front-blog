@@ -1,14 +1,14 @@
 "use strict";
 
 class PostCtrl {
-    constructor($scope, $stateParams, $firebaseObject, $firebaseArray) {
+    constructor($scope, $stateParams, $database) {
         this.scope = $scope;
         let ref = new Firebase("https://front-blog.firebaseio.com/");
         let postId = $stateParams.postId;
-        let postRef = ref.child('posts').child(postId);
-        this.data = $firebaseObject(postRef);
-        let commentsRef = ref.child('comments');
-        this.comments = $firebaseArray(commentsRef);
+
+        this.data = $database.getPost(postId);
+
+        this.comments = $database.getComments();
         this.scope.commentData = {
             postId: this.data.$id,
             date: (new Date()).getTime(),
@@ -17,6 +17,8 @@ class PostCtrl {
             text: ''
         };
 
+        this.authStatus = $database.getAuthStatus();
+        window.scrollTo(0, 0);
     }
 
     submitComment() {
@@ -27,6 +29,6 @@ class PostCtrl {
     };
 }
 
-PostCtrl.$inject = ['$scope', '$stateParams', '$firebaseObject', '$firebaseArray'];
+PostCtrl.$inject = ['$scope', '$stateParams', '$database'];
 
 export default PostCtrl;

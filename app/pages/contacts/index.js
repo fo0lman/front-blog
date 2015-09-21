@@ -3,10 +3,12 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
-import routing from './contacts.routes';
+import routes from './contacts.routes';
 import ContactsCtrl from './contacts.ctrl';
 
-export default angular.module('FrontBlog.contactsPage', [uirouter])
-  .config(routing)
+var contactsPage = angular.module('contactsPage', [uirouter])
+  .config(routes)
   .controller('ContactsCtrl', ContactsCtrl)
   .name;
+
+export default contactsPage;

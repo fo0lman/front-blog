@@ -3,10 +3,12 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
-import routing from './privacy-policy.routes';
+import routes from './privacy-policy.routes';
 import PrivacyPolicyCtrl from './privacy-policy.ctrl';
 
-export default angular.module('FrontBlog.privacyPolicyPage', [uirouter])
-  .config(routing)
-  .controller('PrivacyPolicyCtrl', PrivacyPolicyCtrl)
-  .name;
+var privacyPolicyPage = angular.module('privacyPolicyPage', [uirouter])
+    .config(routes)
+    .controller('PrivacyPolicyCtrl', PrivacyPolicyCtrl)
+    .name;
+
+export default privacyPolicyPage;

@@ -6,10 +6,11 @@ import uirouter from 'angular-ui-router';
 import routes from './home.routes';
 import HomeCtrl from './home.ctrl';
 
-import Firebase from 'firebase';
-import angularfire from 'angularfire';
+import database from '../../modules/database.js';
 
-export default angular.module('homePage', [uirouter, angularfire])
+var homePage = angular.module('homePage', [uirouter, database])
     .config(routes)
     .controller('HomeCtrl', HomeCtrl)
     .name;
+
+export default homePage;

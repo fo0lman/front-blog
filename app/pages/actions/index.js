@@ -3,10 +3,12 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
-import routing from './actions.routes';
+import routes from './actions.routes';
 import ActionsCtrl from './actions.ctrl';
 
-export default angular.module('FrontBlog.actionsPage', [uirouter])
-  .config(routing)
+var actionsPage = angular.module('actionsPage', [uirouter])
+  .config(routes)
   .controller('ActionsCtrl', ActionsCtrl)
   .name;
+
+export default actionsPage;

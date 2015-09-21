@@ -9,7 +9,8 @@ function routes($stateProvider) {
             template: require('./about.html'),
             controller: 'AboutCtrl',
             controllerAs: 'about'
-        });
+        })
+    ;
 }
 
 export default routes;

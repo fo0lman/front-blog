@@ -16,10 +16,16 @@ import contacts from './pages/contacts/index';
 import latestJobs from './pages/latest-jobs/index';
 import post from './pages/post/index';
 import privacyPolicy from './pages/privacy-policy/index';
+import backend from './pages/backend/index';
 
 import routes from './app.config';
+import AppCtrl from './app.ctrl';
 
-var frontBlog = angular.module('FrontBlog', [uirouter, home, about, actions, contacts, latestJobs, post, privacyPolicy])
-    .config(routes);
+import database from './modules/database.js';
+
+var frontBlog = angular.module('FrontBlog', [uirouter, home, about, actions, contacts, latestJobs, post, privacyPolicy, backend, database])
+    .config(routes)
+    .controller('AppCtrl', AppCtrl)
+    .name;
 
 export default frontBlog;

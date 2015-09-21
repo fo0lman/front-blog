@@ -10,7 +10,8 @@ function routes($stateProvider) {
             template: require('./home.html'),
             controller: 'HomeCtrl',
             controllerAs: 'home'
-        });
+        })
+    ;
 }
 
 export default routes;

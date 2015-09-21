@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="FrontBlog">
+<head>
+    <base href="/">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Front Blog</title>
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="bb-blog">
+    <meta name="msapplication-TileImage" content="img/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link rel="icon" sizes="192x192" href="assets/img/chrome-touch-icon-192x192.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/img/apple-touch-icon-precomposed.png">
+
+</head>
+<body>
+<div class="wrapper">
+    <div data-ui-view="header"></div>
+    <div class="container content">
+        <div class="row blog-page">
+            <div class="col-md-9">
+                <div data-ui-view="content"></div>
+            </div>
+            <div class="col-md-3 magazine-page">
+                <div data-ui-view="sidebar"></div>
+            </div>
+        </div>
+    </div>
+    <div data-ui-view="footer"></div>
+</div>
+
+<script src="/app.aaaddcad1508119dc4a6.js"></script></body>
+</html>

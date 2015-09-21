@@ -15,7 +15,9 @@ function routing($urlRouterProvider, $locationProvider, $stateProvider) {
                     template: require('./templates/content.html')
                 },
                 'sidebar': {
-                    template: require('./templates/sidebar.html')
+                    template: require('./templates/sidebar.html'),
+                    controller: 'AppCtrl',
+                    controllerAs: 'sdbar'
                 },
                 'footer': {
                     template: require('./templates/footer.html')
