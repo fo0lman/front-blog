@@ -1,11 +1,15 @@
 'use strict';
 
 import angular from 'angular';
+import uirouter from 'angular-ui-router';
 import firebase from 'firebase';
 import angularfire from 'angularfire';
 
 class Database {
-    constructor($firebaseObject, $firebaseArray, $firebaseAuth) {
+    constructor($state, $stateParams, $firebaseObject, $firebaseArray, $firebaseAuth) {
+        this.state = $state;
+        this.stateParams = $stateParams;
+
         const FIREBASE_URL = 'https://front-blog.firebaseio.com/';
 
         this.firebaseObject = $firebaseObject;
@@ -18,8 +22,11 @@ class Database {
 
         this.posts = this.firebaseArray(this.postsRef);
         this.lastPosts = this.firebaseArray(this.postsRef.limitToLast(3));
+        this.photoStream = this.firebaseArray(this.postsRef.limitToLast(12));
 
         this.comments = this.firebaseArray(this.commentsRef);
+
+
         this.auth = this.firebaseAuth(this.rootRef);
     }
 
@@ -29,6 +36,10 @@ class Database {
 
     getLastPosts() {
         return this.lastPosts;
+    }
+
+    getPhotoStream() {
+        return this.photoStream;
     }
 
     getPost(postId) {
@@ -42,6 +53,16 @@ class Database {
         return this.comments;
     }
 
+    getPostCommentsLenght(postId) {
+        let postCommentsArray = [];
+        this.comments.forEach(function (comment) {
+            if (comment.postId === postId) {
+                postCommentsArray.push(comment);
+            }
+        });
+        return postCommentsArray.length;
+    }
+
     getComment(CommentId) {
         let CommentRef = this.CommentsRef.child(CommentId);
         this.currentComment = this.firebaseObject(CommentRef);
@@ -49,8 +70,10 @@ class Database {
     }
 
     authSocial(provider) {
+        let self = this;
         this.auth.$authWithOAuthPopup(provider).then(function (authData) {
             console.log("Logged in as:", authData.uid);
+            self.reloadPage();
         }).catch(function (error) {
             console.log("Authentication failed:", error);
         });
@@ -58,7 +81,7 @@ class Database {
 
     authLogout() {
         this.auth.$unauth();
-        console.log('LOGOUT');
+        this.reloadPage();
     }
 
     getAuthStatus() {
@@ -147,9 +170,17 @@ class Database {
     //changeUserPassword(email, oldPassword, newPassword) {
     //
     //}
+
+    reloadPage() {
+        this.state.transitionTo(this.state.current, this.stateParams, {
+            reload: true,
+            inherit: false,
+            notify: true
+        });
+    }
 }
 
-Database.$inject = ['$firebaseObject', '$firebaseArray', '$firebaseAuth'];
+Database.$inject = ['$state', '$stateParams', '$firebaseObject', '$firebaseArray', '$firebaseAuth'];
 
 var databaseModule = angular.module('DatabaseModule', [angularfire])
     .service('$database', Database)

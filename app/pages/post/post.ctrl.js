@@ -3,12 +3,25 @@
 class PostCtrl {
     constructor($scope, $stateParams, $database) {
         this.scope = $scope;
-        let ref = new Firebase("https://front-blog.firebaseio.com/");
-        let postId = $stateParams.postId;
 
+        let postId = $stateParams.postId;
         this.data = $database.getPost(postId);
 
         this.comments = $database.getComments();
+        this.allComments = $database.getComments();
+
+        let self = this;
+        let postComments = [];
+
+        this.comments.$loaded().then(function() {
+            self.comments.forEach(function(comment) {
+                if (comment.postId === postId) {
+                    postComments.push(comment);
+                }
+            });
+            self.comments = postComments;
+        });
+
         this.scope.commentData = {
             postId: this.data.$id,
             date: (new Date()).getTime(),
@@ -22,11 +35,16 @@ class PostCtrl {
     }
 
     submitComment() {
-        this.comments.$add(this.scope.commentData).then(function (ref) {
+        this.allComments.$add(this.scope.commentData).then(function (ref) {
             var id = ref.key();
             console.log("added comment with id " + id);
         });
     };
+
+    getComentsLenght() {
+        return this.comments.length;
+    }
+
 }
 
 PostCtrl.$inject = ['$scope', '$stateParams', '$database'];

@@ -28,13 +28,6 @@ class BackendCtrl {
     userData () {
         console.log(this.database.getUserData());
     }
-    //commentsLenght() {
-    //    console.log(this.database.getCommentsLenght());
-    //}
-    //commentsStatus() {
-    //    console.log(this.database.getCommentsStatus());
-    //}
-
 }
 
 BackendCtrl.$inject=['$database'];

@@ -34,6 +34,12 @@ class ActionsCtrl {
     submitForm() {
         if (this.postId) {
             let self = this;
+            let keywords = this.scope.formData.keywords;
+
+            keywords = keywords.split(/[^\w-]+/).join(' ');
+
+            this.scope.formData.keywords = keywords;
+
             this.scope.formData.$save().then(function () {
                 self.state.go('frontblog.home');
             }, function (error) {

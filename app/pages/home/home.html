@@ -4,7 +4,7 @@
             <div class="title-block">
                 <h2><a href="/posts/view/{{post.$id}}">{{post.title}}</a></h2>
             </div>
-            <div class="action-block" data-ng-show="home.authStatus">
+            <div class="action-block" data-ng-if="home.authStatus">
                 <a href="/posts/edit/{{post.$id}}"><i class="fa fa-pencil"></i></a>
                 <a href="#"><i class="fa fa-trash-o" data-ng-click="home.posts.$remove(post)"></i></a>
             </div>
@@ -13,13 +13,13 @@
             <ul class="list-unstyled list-inline blog-info">
                 <li><i class="fa fa-calendar"></i> {{post.date | date: 'dd/MM/yyyy'}}</li>
                 <li><i class="fa fa-pencil"></i> {{post.author}}</li>
-                <li><i class="fa fa-comments"></i> <a href="#">24 Comments</a></li>
+                <li><i class="fa fa-comments"></i> <a href="/posts/view/{{post.$id}}#post-comments">{{home.getComLen(post.$id)}} Comments</a></li>
             </ul>
             <ul class="list-unstyled list-inline blog-tags">
-                <li data-ng-init="kwArray = (post.keywords).split(' ')">
+                <li data-ng-init="tags = (post.keywords).split(' ')">
                     <i class="fa fa-tags"></i>
-                                    <span data-ng-repeat="keyw in kwArray">
-                                        <a href="#">{{keyw}}</a>
+                                    <span data-ng-repeat="tag in tags">
+                                        <a href="#">{{tag}}</a>
                                     </span>
                 </li>
             </ul>

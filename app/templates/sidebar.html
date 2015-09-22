@@ -6,7 +6,8 @@
 <div class="last-posts margin-bottom-40">
     <div class="headline headline-md"><h2>Latest Posts</h2></div>
     <dl class="dl-horizontal" data-ng-repeat="lastpost in sdbar.lastPosts">
-        <dt><a href="/posts/view/{{lastpost.$id}}"><img data-ng-src="{{lastpost.imageUrl}}" alt="{{lastpost.title}}"></a></dt>
+        <dt><a href="/posts/view/{{lastpost.$id}}"><img data-ng-src="{{lastpost.imageUrl}}"
+                                                        alt="{{lastpost.title}}"></a></dt>
         <dd>
             <p><a href="/posts/view/{{lastpost.$id}}">{{lastpost.title}}</a></p>
         </dd>
@@ -14,7 +15,10 @@
 </div>
 <div class="headline headline-md"><h2>Photo Stream</h2></div>
 <ul class="list-unstyled blog-photos margin-bottom-30">
-    <li data-ng-repeat="photo in sdbar.photoStream"><a href="/posts/view/{{photo.$id}}"><img class="hover-effect" data-ng-src="{{photo.imageUrl}}" alt="{{photo.title}}"></a></li>
+    <li data-ng-repeat="photo in sdbar.photoStream"><a href="/posts/view/{{photo.$id}}"><img class="hover-effect"
+                                                                                             data-ng-src="{{photo.imageUrl}}"
+                                                                                             alt="{{photo.title}}"></a>
+    </li>
 </ul>
 <div class="headline headline-md"><h2>Blog Tags</h2></div>
 <ul class="list-unstyled blog-tags margin-bottom-30">

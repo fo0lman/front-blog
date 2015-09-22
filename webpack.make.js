@@ -112,13 +112,13 @@ module.exports = function makeWebpackConfig(options) {
         )
     }
 
-    if (BUILD) {
-        config.plugins.push(
-            new webpack.NoErrorsPlugin(),
-            new webpack.optimize.DedupePlugin(),
-            new webpack.optimize.UglifyJsPlugin()
-        )
-    }
+    //if (BUILD) {
+    //    config.plugins.push(
+    //        new webpack.NoErrorsPlugin(),
+    //        new webpack.optimize.DedupePlugin(),
+    //        new webpack.optimize.UglifyJsPlugin()
+    //    )
+    //}
 
     config.devServer = {
         contentBase: './dist',
