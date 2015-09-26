@@ -1,26 +1,28 @@
 'use strict';
 
 class ActionsCtrl {
-    constructor($scope, $state, $stateParams, $database) {
+    constructor($scope, $state, $stateParams, $database, $pagetitle) {
         this.scope = $scope;
         this.state = $state;
         this.postId = $stateParams.postId;
         this.database = $database;
 
         if (this.postId) {
+            $pagetitle.changeTitle('Редактировать пост');
             this.editPost();
         } else {
+            $pagetitle.changeTitle('Создать пост');
             this.addPost();
         }
     }
 
     editPost() {
-        this.actionTitle = 'Edit Post';
+        this.actionTitle = 'Редактировать пост';
         this.scope.formData = this.database.getPost(this.postId);
     }
 
     addPost() {
-        this.actionTitle = 'Create Post';
+        this.actionTitle = 'Создать пост';
         this.posts =  this.database.getPosts();
         this.scope.formData = {
             imageUrl: 'assets/img/no-image-available.jpg',
@@ -56,6 +58,6 @@ class ActionsCtrl {
     }
 }
 
-ActionsCtrl.$inject = ['$scope', '$state', '$stateParams', '$database'];
+ActionsCtrl.$inject = ['$scope', '$state', '$stateParams', '$database', '$pagetitle'];
 
 export default ActionsCtrl;

@@ -19,38 +19,28 @@ class Database {
         this.rootRef = new Firebase(FIREBASE_URL);
         this.postsRef = this.rootRef.child('posts');
         this.commentsRef = this.rootRef.child('comments');
+        this.projectsRef = this.rootRef.child('projects');
 
-        this.posts = this.firebaseArray(this.postsRef);
-        this.lastPosts = this.firebaseArray(this.postsRef.limitToLast(3));
-        this.photoStream = this.firebaseArray(this.postsRef.limitToLast(12));
-
-        this.comments = this.firebaseArray(this.commentsRef);
-
+        this.comments = this.getComments();
 
         this.auth = this.firebaseAuth(this.rootRef);
     }
 
     getPosts() {
-        return this.posts;
+        return this.firebaseArray(this.postsRef);
     }
 
-    getLastPosts() {
-        return this.lastPosts;
-    }
-
-    getPhotoStream() {
-        return this.photoStream;
+    getLastPosts(count) {
+        return this.firebaseArray(this.postsRef.limitToLast(count));
     }
 
     getPost(postId) {
         let postRef = this.postsRef.child(postId);
-        this.currentPost = this.firebaseObject(postRef);
-        return this.currentPost;
+        return this.firebaseObject(postRef);
     }
 
-
     getComments() {
-        return this.comments;
+        return this.firebaseArray(this.commentsRef);
     }
 
     getPostCommentsLenght(postId) {
@@ -65,8 +55,24 @@ class Database {
 
     getComment(CommentId) {
         let CommentRef = this.CommentsRef.child(CommentId);
-        this.currentComment = this.firebaseObject(CommentRef);
-        return this.currentComment;
+        return this.firebaseObject(CommentRef);
+    }
+
+    getLastComments(count) {
+        return this.firebaseArray(this.commentsRef.limitToLast(count));
+    }
+
+    getProjects() {
+        return this.firebaseArray(this.projectsRef);
+    }
+
+    getProject(projectId) {
+        let projectRef = this.projectsRef.child(projectId);
+        return this.firebaseObject(projectRef);
+    }
+
+    getLastProjects(count) {
+        return this.firebaseArray(this.projectsRef.limitToLast(count));
     }
 
     authSocial(provider) {
@@ -172,11 +178,7 @@ class Database {
     //}
 
     reloadPage() {
-        this.state.transitionTo(this.state.current, this.stateParams, {
-            reload: true,
-            inherit: false,
-            notify: true
-        });
+        this.state.reload();
     }
 }
 

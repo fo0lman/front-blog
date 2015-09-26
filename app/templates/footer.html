@@ -3,48 +3,36 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 md-margin-bottom-40">
-                    <a href="index.html"><img id="logo-footer" class="footer-logo" src="assets/img/logo2-default.png" alt=""></a>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis harum itaque laborum mollitia odit veniam!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum explicabo fugiat inventore officia quam, quibusdam!</p>
+                    <a href="index.html"><img id="logo-footer" class="footer-logo" src="assets/img/logo2-default.png" alt="footer-fb-logo"></a>
+                    <p>"Фронт блог" - это блоговая система, разработаная с помощью фреймворка AngularJS в связке с модулем пакетирования Webpack и синтаксисом ES2015.</p>
                 </div>
 
                 <div class="col-md-3 md-margin-bottom-40">
                     <div class="posts">
-                        <div class="headline"><h2>Latest Posts</h2></div>
+                        <div class="headline"><h2>Последние проекты</h2></div>
                         <ul class="list-unstyled latest-list">
-                            <li>
-                                <a href="#">Incredible content</a>
-                                <small>May 8, 2014</small>
-                            </li>
-                            <li>
-                                <a href="#">Best shoots</a>
-                                <small>June 23, 2014</small>
-                            </li>
-                            <li>
-                                <a href="#">New Terms and Conditions</a>
-                                <small>September 15, 2014</small>
+                            <li data-ng-repeat="project in footer.lastProjects">
+                                <a href="/projects">{{project.title | limitTo: 35}}</a>
+                                <small>{{project.tehnologies}}</small>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3 md-margin-bottom-40">
-                    <div class="headline"><h2>Useful Links</h2></div>
+                    <div class="headline"><h2>Портфолио</h2></div>
                     <ul class="list-unstyled link-list">
-                        <li><a ui-sref="frontblog.about">About</a><i class="fa fa-angle-right"></i></li>
-                        <li><a href="https://github.com/fo0lman" target="_blank">Code samples</a><i class="fa fa-angle-right"></i></li>
-                        <li><a href="/latest-jobs">Latest jobs</a><i class="fa fa-angle-right"></i></li>
-                        <li><a href="http://habrahabr.ru/posts/frontend/" target="_blank">Community</a><i class="fa fa-angle-right"></i></li>
-                        <li><a href="/contacts">Contacts</a><i class="fa fa-angle-right"></i></li>
+                        <li><a ui-sref="frontblog.about">Обо мне</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="/projects">Проекты</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="/contacts">Контакты</a><i class="fa fa-angle-right"></i></li>
                     </ul>
                 </div>
                 <div class="col-md-3 map-img md-margin-bottom-40">
-                    <div class="headline"><h2>Contact Me</h2></div>
+                    <div class="headline"><h2>Связь со мной</h2></div>
                     <address class="md-margin-bottom-40">
-                        Dnepropetrovsk, UA <br/>
-                        Phone: +38(066) 271-82-08 <br/>
-                        Skype: <a href="callto:fo0lman">fo0lman</a> <br/>
-                        Email: <a href="mailto:foolman.sy@gmail.com" class="">foolman.sy@gmail.com</a>
+                        <i class="fa fa-home"></i>  Днепропетровск, UA <br/>
+                        <i class="fa fa-phone"></i>  Телефон: +38 (066) 271-82-08 <br/>
+                        <i class="fa fa-skype"></i>  Skype: <a href="callto:fo0lman">fo0lman</a> <br/>
+                        <i class="fa fa-envelope"></i>  Email: <a href="mailto:foolman.sy@gmail.com" class="">foolman.sy@gmail.com</a>
                     </address>
                 </div>
             </div>
@@ -54,7 +42,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p>2015 &copy; All Rights Reserved. <a href="/privacy-policy">Privacy Policy</a>
+                    <p>2015 &copy; Все права защищены. <a href="/privacy-policy">Политика конфиденциальности</a>
                     </p>
                 </div>
                 <div class="col-md-6">

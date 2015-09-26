@@ -9,29 +9,34 @@
     </div>
     <div class="blog-post-tags">
         <ul class="list-unstyled list-inline blog-info">
-            <li><i class="fa fa-calendar"></i> {{post.data.date | date: 'dd/MM/yyyy'}}</li>
+            <li><i class="fa fa-calendar"></i> {{post.data.date | date: 'dd MMMM yyyy'}}</li>
             <li><i class="fa fa-pencil"></i> {{post.data.author}}</li>
-            <li><i class="fa fa-comments"></i> <a href="#post-comments">{{post.getComentsLenght()}} Comments</a></li>
+            <li><i class="fa fa-comments"></i> <a href="#post-comments">{{post.getComentsLenght()}} комментариев</a></li>
             <li><i class="fa fa-tags"></i> {{post.data.keywords}}</li>
         </ul>
     </div>
-    <div class="blog-img">
-        <img class="img-responsive" data-ng-src="{{post.data.imageUrl}}" alt="{{post.data.title}}">
+    <div class="blog-img box-shadow shadow-effect-2">
+        <img class="img-responsive img-bordered full-width" data-ng-src="{{post.data.imageUrl}}" alt="{{post.data.title}}">
     </div>
+
     <p class="text-justify">{{post.data.description}}</p>
 </div>
 <a href="/">Назад</a>
 <hr>
 
 <div class="post-comments-container" id="post-comments">
-    <h3>Comments</h3>
+    <h3>Коментарии</h3>
     <div class="media" data-ng-repeat="comment in post.comments | filter: { postId: post.data.$id }">
         <a class="pull-left" href="#">
             <img class="media-object avatar" data-ng-src="assets/img/testimonials/default-userpic.png" alt=""/>
         </a>
 
         <div class="media-body">
-            <h4 class="media-heading">{{comment.username}} | <span>{{comment.date | date: 'dd/MM/yyyy'}}</span></h4> <!-- / <a href="#">Reply</a>-->
+            <h4 class="media-heading">{{comment.username}} | <span>{{comment.date | date: 'dd/MM/yyyy'}}</span></h4><!-- / <a href="#">Reply</a>-->
+
+            <!--<div class="action-block" data-ng-if="post.authStatus">-->
+                <!--<a href="#"><i class="fa fa-trash-o" data-ng-click="post.allComments.$remove(comment)"></i></a>-->
+            <!--</div>-->
 
             <p>{{comment.text}}</p>
             <hr>
@@ -40,10 +45,10 @@
 </div>
 
 <div class="post-comments-add-form">
-    <h3>Leave a Comment</h3>
+    <h3>Оставить комментарий</h3>
 
     <form data-ng-submit="post.submitComment()">
-        <label for="inputeName">Name</label>
+        <label for="inputeName">Имя</label>
 
         <div class="row margin-bottom-20">
             <div class="col-md-7 col-md-offset-0">
@@ -59,7 +64,7 @@
             </div>
         </div>
 
-        <label for="inputeMessage">Message</label>
+        <label for="inputeMessage">Сообщение</label>
 
         <div class="row margin-bottom-20">
             <div class="col-md-11 col-md-offset-0">
@@ -67,7 +72,7 @@
             </div>
         </div>
         <p>
-            <button class="btn-u" type="submit">Send Message</button>
+            <button class="btn-u" type="submit">Отправить</button>
         </p>
     </form>
 

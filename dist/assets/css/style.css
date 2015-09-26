@@ -1,3 +1,6 @@
+@import url(blocks.css);
+@import url(app.css);
+
 body {
     color: #333;
     font-size: 13px;
@@ -3369,9 +3372,251 @@ blockquote.hero.hero-default:hover {
 .testimonials.testimonials-bg-dark .carousel-arrow i:hover {
     background: #333;
 }
+/*Progress Bar
+------------------------------------*/
+.progress {
+    border-radius: 0;
+}
 
+.progress-u {
+    box-shadow: none;
+}
+
+.progress-u .progress-bar {
+    box-shadow: none;
+}
+
+/*progress-bar (sizes)*/
+.progress-lg {
+    height: 25px;
+}
+.progress-lg p {
+    padding-top: 3px;
+}
+
+.progress-sm {
+    height: 12px;
+}
+
+.progress-xs {
+    height: 7px;
+}
+
+.progress-xxs {
+    height: 3px;
+}
+
+/*progress-bar (colors)*/
+.progress {
+    background: #e5e5e5;
+}
+
+.progress-bar-u {
+    background: #72c02c;
+}
+
+.progress-bar-blue {
+    background: #3498db;
+}
+
+.progress-bar-orange {
+    background: #e67e22;
+}
+
+.progress-bar-red {
+    background: #e74c3c;
+}
+
+.progress-bar-purple {
+    background: #9b6bcc;
+}
+
+.progress-bar-aqua {
+    background: #27d7e7;
+}
+
+.progress-bar-brown {
+    background: #9c8061;
+}
+
+.progress-bar-dark-blue {
+    background: #4765a0;
+}
+
+.progress-bar-light-green {
+    background: #79d5b3;
+}
+
+.progress-bar-dark {
+    background: #555;
+}
+
+/*Progress Bar Animation
+------------------------------------*/
 .progress {
     position: relative;
+}
+
+.progress .progress-bar {
+    overflow: hidden;
+    line-height: 20px;
+    position: absolute;
+}
+
+.progress-box .progress-bar {
+    transition: all 3s ease-in;
+    -o-transition: all 3s ease-in;
+    -ms-transition: all 3s ease-in;
+    -moz-transition: all 3s ease-in;
+    -webkit-transition: all 3s ease-in;
+}
+
+/*Vertical Progress Bar*/
+.progress.vertical {
+    float: left;
+    width: 100%;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.progress.vertical.bottom {
+    position: relative;
+}
+
+.progress.vertical .progress-bar {
+    height: 0;
+    width: 100%;
+    transition: height 3s ease;
+    -o-transition: height 3s ease;
+    -ms-transition: height 3s ease;
+    -moz-transition: height 3s ease;
+    -webkit-transition: height 3s ease;
+}
+
+.progress.vertical.bottom .progress-bar {
+    bottom: 0;
+    position: absolute;
+}
+
+/*Count Stars
+------------------------------------*/
+.stars-existing {
+    color: #72c02c;
+    cursor: pointer;
+}
+
+.star-lg {
+    font-size: 30px;
+}
+
+.star-sm {
+    font-size: 25px;
+}
+
+.star-xs {
+    font-size: 20px;
+}
+
+.star-default {
+    font-size: 16px;
+}
+
+/*Icons
+------------------------------------*/
+/*Social Icons*/
+.social-icons {
+    margin: 0;
+    padding: 0;
+}
+
+.social-icons li {
+    list-style: none;
+    margin-right: 3px;
+    margin-bottom: 5px;
+    text-indent: -9999px;
+    display: inline-block;
+}
+
+.social-icons li a, a.social-icon {
+    width: 28px;
+    height: 28px;
+    display: block;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.social-icons li:hover a {
+    background-position: 0 -38px;
+}
+
+.social-icons-color li a {
+    opacity: 0.7;
+    background-position: 0 -38px !important;
+    -webkit-backface-visibility: hidden; /*For Chrome*/
+}
+
+.social-icons-color li a:hover {
+    opacity: 1;
+}
+
+/*http://htmlstream.com/preview/unify-v1.8/assets/img/icons/social/facebook.png*/
+
+/*.social_amazon {background: url(../img/icons/social/amazon.png) no-repeat;}*/
+/*.social_behance {background: url(../img/icons/social/behance.png) no-repeat;}*/
+/*.social_blogger {background: url(../img/icons/social/blogger.png) no-repeat;}*/
+/*.social_deviantart {background: url(../img/icons/social/deviantart.png) no-repeat;}*/
+/*.social_dribbble {background: url(../img/icons/social/dribbble.png) no-repeat;}*/
+/*.social_dropbox {background: url(../img/icons/social/dropbox.png) no-repeat;}*/
+/*.social_evernote {background: url(../img/icons/social/evernote.png) no-repeat;}*/
+.social_facebook {background: url(../img/icons/social/facebook.png) no-repeat;}
+/*.social_forrst {background: url(../img/icons/social/forrst.png) no-repeat;}*/
+/*.social_github {background: url(../img/icons/social/github.png) no-repeat;}*/
+.social_googleplus {background: url(../img/icons/social/googleplus.png) no-repeat;}
+/*.social_jolicloud {background: url(../img/icons/social/jolicloud.png) no-repeat;}*/
+/*.social_last-fm {background: url(../img/icons/social/last-fm.png) no-repeat;}*/
+.social_linkedin {background: url(../img/icons/social/linkedin.png) no-repeat;}
+/*.social_picasa {background: url(../img/icons/social/picasa.png) no-repeat;}*/
+/*.social_pintrest {background: url(../img/icons/social/pintrest.png) no-repeat;}*/
+/*.social_rss {background: url(../img/icons/social/rss.png) no-repeat;}*/
+/*.social_skype {background: url(../img/icons/social/skype.png) no-repeat;}*/
+/*.social_spotify {background: url(../img/icons/social/spotify.png) no-repeat;}*/
+/*.social_stumbleupon {background: url(../img/icons/social/stumbleupon.png) no-repeat;}*/
+/*.social_tumblr {background: url(../img/icons/social/tumblr.png) no-repeat;}*/
+.social_twitter {background: url(../img/icons/social/twitter.png) no-repeat;}
+/*.social_vimeo {background: url(../img/icons/social/vimeo.png) no-repeat;}*/
+/*.social_wordpress {background: url(../img/icons/social/wordpress.png) no-repeat;}*/
+/*.social_xing {background: url(../img/icons/social/xing.png) no-repeat;}*/
+/*.social_yahoo {background: url(../img/icons/social/yahoo.png) no-repeat;}*/
+/*.social_youtube {background: url(../img/icons/social/youtube.png) no-repeat;}*/
+.social_vk {background: url(../img/icons/social/vk.png) no-repeat;}
+/*.social_instagram {background: url(../img/icons/social/instagram.png) no-repeat;}*/
+
+/*About Me Page
+------------------------------------*/
+.about-me {
+    overflow: hidden;
+}
+
+.about-me h2 {
+    margin: 0;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+.about-me span {
+    color: #999;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.about-me .social-icons {
+    margin-top: 7px;
 }
 
 .tags-v1 li a:hover {

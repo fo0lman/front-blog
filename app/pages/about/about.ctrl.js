@@ -1,12 +1,12 @@
 'use strict';
 
 class AboutCtrl {
-    constructor(){
-
+    constructor($pagetitle) {
+        $pagetitle.changeTitle('Обо мне');
+        window.scrollTo(0, 0);
     }
-
 }
 
-//AboutCtrl.$inject=[];
+AboutCtrl.$inject=['$pagetitle'];
 
 export default AboutCtrl;

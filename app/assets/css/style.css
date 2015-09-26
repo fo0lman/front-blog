@@ -1,3 +1,6 @@
+@import url(blocks.css);
+@import url(app.css);
+
 body {
     color: #333;
     font-size: 13px;
@@ -2107,6 +2110,10 @@ UNUSED.blog-twitter .blog-twitter-inner,
     background: url(../img/map-img.png) 5px 60px no-repeat;
 }
 
+.footer-v1 .footer .map-img i {
+    margin-right: 5px;
+}
+
 .footer-v1 .footer .dl-horizontal a:hover {
     color: #5fb611 !important;
 }
@@ -2854,7 +2861,9 @@ h3[class^="title-v3-"] {
     text-decoration: none;
 }
 
-.btn-u:hover {
+.btn-u:hover,
+.btn-u:active,
+.btn-u:focus{
     color: #fff;
     text-decoration: none;
     -webkit-transition: all 0.3s ease-in-out;
@@ -3369,10 +3378,405 @@ blockquote.hero.hero-default:hover {
 .testimonials.testimonials-bg-dark .carousel-arrow i:hover {
     background: #333;
 }
+/*Progress Bar
+------------------------------------*/
+.progress {
+    border-radius: 0;
+}
 
+.progress-u {
+    box-shadow: none;
+}
+
+.progress-u .progress-bar {
+    box-shadow: none;
+}
+
+/*progress-bar (sizes)*/
+.progress-lg {
+    height: 25px;
+}
+.progress-lg p {
+    padding-top: 3px;
+}
+
+.progress-sm {
+    height: 12px;
+}
+
+.progress-xs {
+    height: 7px;
+}
+
+.progress-xxs {
+    height: 3px;
+}
+
+/*progress-bar (colors)*/
+.progress {
+    background: #e5e5e5;
+}
+
+.progress-bar-u {
+    background: #72c02c;
+}
+
+.progress-bar-blue {
+    background: #3498db;
+}
+
+.progress-bar-orange {
+    background: #e67e22;
+}
+
+.progress-bar-red {
+    background: #e74c3c;
+}
+
+.progress-bar-purple {
+    background: #9b6bcc;
+}
+
+.progress-bar-aqua {
+    background: #27d7e7;
+}
+
+.progress-bar-brown {
+    background: #9c8061;
+}
+
+.progress-bar-dark-blue {
+    background: #4765a0;
+}
+
+.progress-bar-light-green {
+    background: #79d5b3;
+}
+
+.progress-bar-dark {
+    background: #555;
+}
+
+/*Progress Bar Animation
+------------------------------------*/
 .progress {
     position: relative;
 }
+
+.progress .progress-bar {
+    overflow: hidden;
+    line-height: 20px;
+    position: absolute;
+}
+
+.progress-box .progress-bar {
+    transition: all 3s ease-in;
+    -o-transition: all 3s ease-in;
+    -ms-transition: all 3s ease-in;
+    -moz-transition: all 3s ease-in;
+    -webkit-transition: all 3s ease-in;
+}
+
+/*Vertical Progress Bar*/
+.progress.vertical {
+    float: left;
+    width: 100%;
+    height: 200px;
+    margin-right: 20px;
+}
+
+.progress.vertical.bottom {
+    position: relative;
+}
+
+.progress.vertical .progress-bar {
+    height: 0;
+    width: 100%;
+    transition: height 3s ease;
+    -o-transition: height 3s ease;
+    -ms-transition: height 3s ease;
+    -moz-transition: height 3s ease;
+    -webkit-transition: height 3s ease;
+}
+
+.progress.vertical.bottom .progress-bar {
+    bottom: 0;
+    position: absolute;
+}
+
+/*Count Stars
+------------------------------------*/
+.stars-existing {
+    color: #72c02c;
+    cursor: pointer;
+}
+
+.star-lg {
+    font-size: 30px;
+}
+
+.star-sm {
+    font-size: 25px;
+}
+
+.star-xs {
+    font-size: 20px;
+}
+
+.star-default {
+    font-size: 16px;
+}
+
+/*Icons
+------------------------------------*/
+/*Social Icons*/
+.social-icons {
+    margin: 0;
+    padding: 0;
+}
+
+.social-icons li {
+    list-style: none;
+    margin-right: 3px;
+    margin-bottom: 5px;
+    text-indent: -9999px;
+    display: inline-block;
+}
+
+.social-icons li a, a.social-icon {
+    width: 28px;
+    height: 28px;
+    display: block;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.social-icons li:hover a {
+    background-position: 0 -38px;
+}
+
+.social-icons-color li a {
+    opacity: 0.7;
+    background-position: 0 -38px !important;
+    -webkit-backface-visibility: hidden; /*For Chrome*/
+}
+
+.social-icons-color li a:hover {
+    opacity: 1;
+}
+
+/*About Me Page
+------------------------------------*/
+.about-me {
+    overflow: hidden;
+}
+
+.about-me .myname {
+    padding: 60px 0 20px;
+    text-align: center;
+}
+
+.about-me h2 {
+    margin: 20px 0;
+    font-size: 42px;
+}
+
+
+.about-me span {
+    color: #999;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.about-me .social-icons {
+    margin-top: 7px;
+}
+
+
+/* Projects*/
+
+/*Portfolio v1
+------------------------------------*/
+.view {
+    z-index:9;
+    cursor: default;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 0 3px #ddd;
+}
+.view .mask,
+.view .content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+.view img {
+    display: block;
+    position: relative;
+}
+.view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 22px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 20px 0 0 0;
+    text-shadow:none;
+}
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #fff;
+    padding: 10px 20px 10px;
+    text-align: center;
+}
+.view a.info {
+    color: #fff;
+    background: #000;
+    padding: 5px 12px;
+    text-decoration: none;
+    margin-top:10px;
+    display: inline-block;
+    overflow:hidden;
+    text-transform: uppercase;
+}
+.view a.info:hover {
+    background:#72c02c;
+}
+
+.portfolio-responsive h2 {
+    margin-top:0 !important;
+}
+
+/*CSS3 Hover Effect*/
+.view-tenth img {
+    left:10px;
+    margin-left:-10px;
+    position:relative;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+}
+.view-tenth .mask {
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+.view-tenth h2 {
+    color: #333;
+    margin: 20px 40px 0;
+    background: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+.view-tenth p {
+    color: #333;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+.view-tenth a.info {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+.view-tenth:hover img {
+    -webkit-transform: scale(2) rotate(10deg);
+    -moz-transform: scale(2) rotate(10deg);
+    -o-transform: scale(2) rotate(10deg);
+    -ms-transform: scale(2) rotate(10deg);
+    transform: scale(2) rotate(10deg);
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+}
+.view-tenth:hover .mask {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+.view-tenth:hover h2,
+.view-tenth:hover p,
+.view-tenth:hover a.info,
+.view-tenth:focus h2,
+.view-tenth:focus p,
+.view-tenth:focus a.info {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .portfolio-4-columns .mask h2 {
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+
+    .portfolio-4-columns .mask p {
+        display: none;
+    }
+}
+
 
 .tags-v1 li a:hover {
     text-decoration: none;
@@ -3594,10 +3998,6 @@ blockquote.hero.hero-default:hover {
     .blog-medium img {
         margin-bottom: 20px;
     }
-}
-
-.blog {
-    margin-right: 45px;
 }
 
 .title-block {

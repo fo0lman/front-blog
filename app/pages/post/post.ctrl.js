@@ -1,8 +1,9 @@
 "use strict";
 
 class PostCtrl {
-    constructor($scope, $stateParams, $database) {
+    constructor($scope, $stateParams, $database, $pagetitle) {
         this.scope = $scope;
+        this.database = $database;
 
         let postId = $stateParams.postId;
         this.data = $database.getPost(postId);
@@ -32,12 +33,24 @@ class PostCtrl {
 
         this.authStatus = $database.getAuthStatus();
         window.scrollTo(0, 0);
+
+
+        let titleArray = [];
+        this.data.$loaded().then(function() {
+            self.data.forEach(function(data) {
+                titleArray.push(data);
+            });
+
+            $pagetitle.changeTitle(titleArray[5]);
+        });
     }
 
     submitComment() {
+        let self = this;
         this.allComments.$add(this.scope.commentData).then(function (ref) {
             var id = ref.key();
             console.log("added comment with id " + id);
+            self.database.reloadPage();
         });
     };
 
@@ -47,6 +60,6 @@ class PostCtrl {
 
 }
 
-PostCtrl.$inject = ['$scope', '$stateParams', '$database'];
+PostCtrl.$inject = ['$scope', '$stateParams', '$database', '$pagetitle'];
 
 export default PostCtrl;

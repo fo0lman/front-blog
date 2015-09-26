@@ -9,7 +9,9 @@ function routing($urlRouterProvider, $locationProvider, $stateProvider) {
         .state('frontblog', {
             views: {
                 'header': {
-                    template: require('./templates/header.html')
+                    template: require('./templates/header.html'),
+                    controller: 'AppCtrl',
+                    controllerAs: 'header'
                 },
                 'content': {
                     template: require('./templates/content.html')
@@ -17,10 +19,12 @@ function routing($urlRouterProvider, $locationProvider, $stateProvider) {
                 'sidebar': {
                     template: require('./templates/sidebar.html'),
                     controller: 'AppCtrl',
-                    controllerAs: 'sdbar'
+                    controllerAs: 'sidebar'
                 },
                 'footer': {
-                    template: require('./templates/footer.html')
+                    template: require('./templates/footer.html'),
+                    controller: 'AppCtrl',
+                    controllerAs: 'footer'
                 }
             }
         });

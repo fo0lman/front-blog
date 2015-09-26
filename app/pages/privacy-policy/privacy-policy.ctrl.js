@@ -1,12 +1,12 @@
 'use strict';
 
 class PrivacyPolicyCtrl {
-    constructor() {
-
+    constructor($pagetitle) {
+        $pagetitle.changeTitle('Политика конфиденциальности');
     }
 
 }
 
-//PrivacyPolicyCtrl.$inject = [''];
+PrivacyPolicyCtrl.$inject = ['$pagetitle'];
 
 export default PrivacyPolicyCtrl;

@@ -1,0 +1,37 @@
+<div class="row s-results margin-bottom-50">
+
+    <div class="row ng-scope">
+        <div class="col-md-12">
+            <div class="headline-left margin-bottom-30">
+                <h2 class="headline-brd heading-md">Результаты <span class="color-green">поиска</span></h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-12 text-center" data-ng-if="searchPost.length">
+        <h4>Найдено {{searchPost.length}} результатов</h4>
+        <hr>
+    </div>
+
+    <div class="col-md-12 text-center" data-ng-if="!searchPost.length">
+        <h2>К сожалению по Вашему запросу ничего не найдено.</h2>
+        <h4>Пожалуйста повторите поиск с новым значением запроса.</h4>
+    </div>
+
+    <div class="col-md-12">
+        <div data-ng-repeat="post in searchPost = (search.posts | filter: { $: search.getSearchQuery()} )">
+            <div class="inner-results">
+                <h3><a href="/posts/view/{{post.$id}}">{{post.title}}</a></h3>
+
+                <p>{{post.description | limitTo:500}}{{'...'}}</p>
+
+                <ul class="list-unstyled list-inline blog-info">
+                    <li><i class="fa fa-calendar"></i> {{post.date | date: 'dd MMMM yyyy'}}</li>
+                    <li><i class="fa fa-pencil"></i> {{post.author}}</li>
+                    <li><i class="fa fa-comments"></i> <a href="/posts/view/{{post.$id}}#post-comments">10 комментариев</a></li>
+                </ul>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>

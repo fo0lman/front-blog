@@ -1,11 +1,15 @@
-<div class="headline headline-md"><h2>Search</h2></div>
-<div class="input-group margin-bottom-40">
-    <input type="text" id="searchInput" data-ng-model="searchQuery" class="form-control" placeholder="Search">
-    <span class="input-group-btn"><button class="btn-u" id="searchBtn" type="button">Go</button></span>
-</div>
+<div class="headline headline-md"><h2>Поиск</h2></div>
+<form class="form-horizontal" data-ng-submit="sidebar.submitSearch()">
+    <div class="input-group margin-bottom-40">
+        <input type="text" id="searchInput" data-ng-model="searchQuery" class="form-control" placeholder="Поиск">
+        <span class="input-group-btn">
+            <button class="btn-u" id="searchBtn" type="submit"><i class="fa fa-search"></i></button>
+        </span>
+    </div>
+</form>
 <div class="last-posts margin-bottom-40">
-    <div class="headline headline-md"><h2>Latest Posts</h2></div>
-    <dl class="dl-horizontal" data-ng-repeat="lastpost in sdbar.lastPosts">
+    <div class="headline headline-md"><h2>Последние посты</h2></div>
+    <dl class="dl-horizontal" data-ng-repeat="lastpost in sidebar.lastPosts">
         <dt><a href="/posts/view/{{lastpost.$id}}"><img data-ng-src="{{lastpost.imageUrl}}"
                                                         alt="{{lastpost.title}}"></a></dt>
         <dd>
@@ -13,14 +17,15 @@
         </dd>
     </dl>
 </div>
-<div class="headline headline-md"><h2>Photo Stream</h2></div>
+<div class="headline headline-md"><h2>Фото-стрим</h2></div>
 <ul class="list-unstyled blog-photos margin-bottom-30">
-    <li data-ng-repeat="photo in sdbar.photoStream"><a href="/posts/view/{{photo.$id}}"><img class="hover-effect"
-                                                                                             data-ng-src="{{photo.imageUrl}}"
-                                                                                             alt="{{photo.title}}"></a>
+    <li data-ng-repeat="photo in sidebar.photoStream"><a href="/posts/view/{{photo.$id}}"><img
+            class="hover-effect img-bordered"
+            data-ng-src="{{photo.imageUrl}}"
+            alt="{{photo.title}}"></a>
     </li>
 </ul>
-<div class="headline headline-md"><h2>Blog Tags</h2></div>
+<div class="headline headline-md"><h2>Теги</h2></div>
 <ul class="list-unstyled blog-tags margin-bottom-30">
-    <li data-ng-repeat="tag in sdbar.tags"><a href="#"><i class="fa fa-tags"></i> {{tag}}</a></li>
+    <li data-ng-repeat="tag in sidebar.tags" data-ng-click="sidebar.tagSearch()"><a href="/tags/{{tag}}"><i class="fa fa-tags"></i> {{tag}}</a></li>
 </ul>

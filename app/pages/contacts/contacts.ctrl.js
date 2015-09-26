@@ -1,12 +1,13 @@
 'use strict';
 
 class ContactsCtrl {
-    constructor() {
-
+    constructor($pagetitle) {
+        $pagetitle.changeTitle('Контакты');
+        window.scrollTo(0, 0)
     }
 
 }
 
-//ContactsCtrl.$inject = [''];
+ContactsCtrl.$inject = ['$pagetitle'];
 
 export default ContactsCtrl;

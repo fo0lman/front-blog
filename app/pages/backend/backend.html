@@ -1,17 +1,18 @@
-<h1>Backend Page</h1>
+<h1>Админ панель</h1>
 <hr/>
-<p>Posts</p>
-<a class="btn-u btn-u-small" href="/posts/add" data-ng-if="backend.authStatus"><i class="fa fa-plus"></i> Add Post</a>
+<p>Посты</p>
+<a class="btn-u btn-u-small" href="/posts/add" data-ng-if="backend.authStatus"><i class="fa fa-plus"></i> Добавить</a>
 <hr/>
-<p>Auth</p>
+<p>Пректы</p>
+<a class="btn-u btn-u-small" href="#" data-ng-if="backend.authStatus" data-ng-click="backend.addProject()"><i class="fa fa-plus"></i> Добавить</a>
+<hr/>
+<p>Авторизация</p>
 <a class="btn-u btn-u-small" href="#" data-ng-click="backend.authGoogle()">Google</a>
 <a class="btn-u btn-u-small" href="#" data-ng-click="backend.authFacebook()">Facebook</a>
 <a class="btn-u btn-u-small" href="#" data-ng-click="backend.authTwitter()">Twitter</a>
 <a class="btn-u btn-u-small" href="#" data-ng-click="backend.authGithub()">Github</a>
+<a class="btn-u btn-u-small" href="#" data-ng-click="backend.logout()">LogOUT</a>
 <hr/>
-<p>User (console)</p>
+<p>Юзверь (инфо в консоли)</p>
 <a class="btn-u btn-u-small" href="#" data-ng-click="backend.userStatus()">Status</a>
 <a class="btn-u btn-u-small" href="#" data-ng-click="backend.userData()" data-ng-if="backend.authStatus">Data</a>
-<hr/>
-<p>Logout</p>
-<a class="btn-u btn-u-small" href="#" data-ng-click="backend.logout()">LogOUT</a>
