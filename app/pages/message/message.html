@@ -1,0 +1,12 @@
+<div class="panel panel-green margin-bottom-40">
+    <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa fa-envelope"></i>Сообщение {{message.data.date | date: 'dd.MM.yyyy HH:mm'}}</h3>
+    </div>
+    <div class="panel-body">
+        <h3>{{message.data.name}} <a href="mailto:{{message.data.email}}">{{message.data.email}}</a></h3>
+
+        <p class="text-justify">{{message.data.message}}</p>
+    </div>
+</div>
+
+<a href="/backend">Назад</a>

@@ -2,11 +2,14 @@
 
 class TagsCtrl {
     constructor($pagetitle, $stateParams, $database) {
-        this.posts = $database.getPosts();
+        this.database = $database;
+        this.posts = this.database.getPosts();
         this.tag = $stateParams.tag;
-        this.authStatus = $database.getAuthStatus();
-        console.log(this.authStatus);
+        this.authStatus = this.database.getAuthStatus();
         $pagetitle.changeTitle(this.tag);
+    }
+    getPostCommentsLenght(postId) {
+        return this.database.getPostCommentsLenght(postId);
     }
 }
 

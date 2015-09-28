@@ -9,7 +9,7 @@
 </form>
 <div class="last-posts margin-bottom-40">
     <div class="headline headline-md"><h2>Последние посты</h2></div>
-    <dl class="dl-horizontal" data-ng-repeat="lastpost in sidebar.lastPosts">
+    <dl class="dl-horizontal" data-ng-repeat="lastpost in sidebar.lastPosts | orderBy :'-date'">
         <dt><a href="/posts/view/{{lastpost.$id}}"><img data-ng-src="{{lastpost.imageUrl}}"
                                                         alt="{{lastpost.title}}"></a></dt>
         <dd>
@@ -19,10 +19,8 @@
 </div>
 <div class="headline headline-md"><h2>Фото-стрим</h2></div>
 <ul class="list-unstyled blog-photos margin-bottom-30">
-    <li data-ng-repeat="photo in sidebar.photoStream"><a href="/posts/view/{{photo.$id}}"><img
-            class="hover-effect img-bordered"
-            data-ng-src="{{photo.imageUrl}}"
-            alt="{{photo.title}}"></a>
+    <li data-ng-repeat="photo in sidebar.photoStream | orderBy :'-date'">
+        <a href="/posts/view/{{photo.$id}}"><img class="hover-effect img-bordered" data-ng-src="{{photo.imageUrl}}" alt="{{photo.title}}"></a>
     </li>
 </ul>
 <div class="headline headline-md"><h2>Теги</h2></div>

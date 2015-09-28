@@ -12,6 +12,11 @@ import pagetitle from '../../modules/page-title.js';
 var backendPage = angular.module('backendPage', [uirouter, database, pagetitle])
     .config(routes)
     .controller('BackendCtrl', BackendCtrl)
+    .filter('status', function () {
+        return function (input) {
+            return input ? 'Прочитано' : 'Новое';
+        }
+    })
     .name;
 
 export default backendPage;

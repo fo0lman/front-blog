@@ -14,12 +14,12 @@
             <ul class="list-unstyled list-inline blog-info">
                 <li><i class="fa fa-calendar"></i> {{post.date | date: 'dd MMMM yyyy'}}</li>
                 <li><i class="fa fa-pencil"></i> {{post.author}}</li>
-                <li><i class="fa fa-comments"></i> <a href="/posts/view/{{post.$id}}#post-comments">{{home.getComLen(post.$id)}} комментариев</a></li>
+                <li><i class="fa fa-comments"></i> <a href="/posts/view/{{post.$id}}#post-comments">{{tags.getPostCommentsLenght(post.$id)}} комментариев</a></li>
             </ul>
             <ul class="list-unstyled list-inline blog-tags">
-                <li data-ng-init="tags = (post.keywords).split(' ')">
+                <li data-ng-init="tagsArray = (post.keywords).split(' ')">
                     <i class="fa fa-tags"></i>
-                                    <span data-ng-repeat="tag in tags">
+                                    <span data-ng-repeat="tag in tagsArray">
                                         <a href="#">{{tag}}</a>
                                     </span>
                 </li>
@@ -29,6 +29,11 @@
             <img class="img-responsive img-bordered full-width" data-ng-src="{{post.imageUrl}}" alt="{{post.title}}">
         </div>
         <p class="text-justify">{{post.description | limitTo:1500}}{{'...'}}</p>
+
+
+
+
+
 
         <p><a class="btn-u btn-u-small" href="/posts/view/{{post.$id}}">Подробнее</a>
         </p>

@@ -5,6 +5,7 @@ class BackendCtrl {
         this.database = $database;
         this.authStatus = this.database.getAuthStatus();
         this.projects =  this.database.getProjects();
+        this.messages =  this.database.getMessages();
         $pagetitle.changeTitle('Админ-панель');
     }
 

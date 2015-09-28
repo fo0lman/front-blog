@@ -2,20 +2,42 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/.gitignore" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/app.ctrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/app.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/database.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/page-title.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/pages/about/about.ctrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/pages/about/about.html" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/pages/about/about.routes.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/pages/about/index.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/pages/actions/actions.routes.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/actions/actions.ctrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/pages/actions/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/backend/backend.ctrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/backend/backend.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/backend/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/contacts/contacts.ctrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/contacts/contacts.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/pages/contacts/contacts.routes.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/pages/contacts/index.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/pages/latest-jobs/index.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/pages/latest-jobs/latest-jobs.routes.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/pages/post/index.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/pages/post/post.routes.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/home/home.ctrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/home/home.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/home/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/message/message.ctrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/post/post.ctrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/pages/privacy-policy/index.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/pages/privacy-policy/privacy-policy.routes.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/privacy-policy/privacy-policy.ctrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/privacy-policy/privacy-policy.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/projects/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/projects/month.filter.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/projects/projects.ctrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/projects/projects.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/search/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/search/search.ctrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/search/search.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/tags/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/tags/tags.ctrl.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/pages/tags/tags.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/templates/header.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/templates/sidebar.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/package.json" charset="UTF-8" />
   </component>
 </project>

@@ -20,6 +20,7 @@ class Database {
         this.postsRef = this.rootRef.child('posts');
         this.commentsRef = this.rootRef.child('comments');
         this.projectsRef = this.rootRef.child('projects');
+        this.messagessRef = this.rootRef.child('messages');
 
         this.comments = this.getComments();
 
@@ -74,6 +75,25 @@ class Database {
     getLastProjects(count) {
         return this.firebaseArray(this.projectsRef.limitToLast(count));
     }
+
+
+
+    getMessages() {
+        return this.firebaseArray(this.messagessRef);
+    }
+
+    getLastMessages(count) {
+        return this.firebaseArray(this.messagessRef.limitToLast(count));
+    }
+
+    getMessage(messageId) {
+        let messagesRef = this.messagessRef.child(messageId);
+        return this.firebaseObject(messagesRef);
+    }
+
+
+
+
 
     authSocial(provider) {
         let self = this;

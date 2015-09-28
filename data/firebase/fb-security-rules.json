@@ -13,6 +13,13 @@
       "$comment_id": {
         ".validate": "newData.hasChildren(['postId', 'date', 'username', 'email', 'text']) && newData.child('postId').isString() && newData.child('date').isNumber() && newData.child('username').isString() && newData.child('email').isString() && newData.child('text').isString()"
       }
+    },
+    "projects": {
+      ".read": true,
+      ".write": "auth != null",
+      "$project_id": {
+        ".validate": "newData.hasChildren(['title', 'date', 'client', 'imageUrl', 'description', 'tehnologies', 'siteUrl']) && newData.child('title').isString() && newData.child('date').isNumber() && newData.child('client').isString() && newData.child('imageUrl').isString() && newData.child('description').isString() && newData.child('tehnologies').isString() && newData.child('siteUrl').isString()"
+      }
     }
   }
 }

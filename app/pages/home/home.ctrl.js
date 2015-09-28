@@ -8,7 +8,7 @@ class HomeCtrl {
         this.authStatus = this.database.getAuthStatus();
         $pagetitle.changeTitle('Главная');
     }
-    getComLen(postId) {
+    getPostCommentsLenght(postId) {
         return this.database.getPostCommentsLenght(postId);
     }
 }

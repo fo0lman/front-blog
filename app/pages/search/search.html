@@ -28,7 +28,7 @@
                 <ul class="list-unstyled list-inline blog-info">
                     <li><i class="fa fa-calendar"></i> {{post.date | date: 'dd MMMM yyyy'}}</li>
                     <li><i class="fa fa-pencil"></i> {{post.author}}</li>
-                    <li><i class="fa fa-comments"></i> <a href="/posts/view/{{post.$id}}#post-comments">10 комментариев</a></li>
+                    <li><i class="fa fa-comments"></i> <a href="/posts/view/{{post.$id}}#post-comments">{{search.getPostCommentsLenght(post.$id)}} комментариев</a></li>
                 </ul>
             </div>
             <hr>

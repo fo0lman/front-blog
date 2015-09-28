@@ -20,13 +20,14 @@ import privacyPolicy from './pages/privacy-policy/index';
 import backend from './pages/backend/index';
 import search from './pages/search/index';
 import tags from './pages/tags/index';
+import message from './pages/message/index';
 
 import routes from './app.config';
 import AppCtrl from './app.ctrl';
 
 import database from './modules/database.js';
 
-var frontBlog = angular.module('FrontBlog', [uirouter, home, about, actions, contacts, projects, post, privacyPolicy, backend, search, tags, database])
+var frontBlog = angular.module('FrontBlog', [uirouter, home, about, actions, contacts, projects, post, privacyPolicy, backend, search, tags, database, message])
     .config(routes)
     .controller('AppCtrl', AppCtrl)
     .name;

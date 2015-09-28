@@ -5,3 +5,70 @@
         </div>
     </div>
 </div>
+
+<div class="row">
+    <div class="col-md-6 box-shadow shadow-effect-2">
+        <img class="img-responsive img-bordered full-width" src="assets/img/dnepr-map.jpg" alt="dneprmap">
+    </div>
+    <div class="col-md-6">
+
+        <h3>Связь со мной</h3>
+
+        <p>Физически я нахожусь в городе Днепропетровск, Украина, но фактически могу работать с любой точкой планеты.
+            Я считаю, что могу помочь Вашей компании, фирме или клубу по интересам, разработать новый продукт или улучшить уже существующий.
+            Для связи со мной, воспользуйтесь контактной формой или выберите для себя любой другой удобный способ.</p>
+        <hr>
+
+        <h3>Адрес</h3>
+
+        <address class="md-margin-bottom-40">
+            <ul class="list-unstyled">
+                <li><i class="fa fa-home color-green"></i> Днепропетровск, UA</li>
+                <li><i class="fa fa-phone color-green"></i> Телефон: +38 (066) 271-82-08</li>
+                <li><i class="fa fa-skype color-green"></i> Skype: <a href="callto:fo0lman">fo0lman</a></li>
+                <li><i class="fa fa-envelope color-green"></i> Email: <a href="mailto:foolman.sy@gmail.com" class="">foolman.sy@gmail.com</a>
+                </li>
+            </ul>
+        </address>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <hr>
+        <div class="post-comments-add-form">
+            <h3>Отправить сообщение</h3>
+
+            <form data-ng-submit="contacts.submitMessage()">
+                <label for="inputeName">Имя</label>
+
+                <div class="row margin-bottom-20">
+                    <div class="col-md-6">
+                        <input type="text" id="inputeName" data-ng-model="formData.name" class="form-control">
+                    </div>
+                </div>
+
+                <label for="inputeEmail">Email <span class="color-red">*</span></label>
+
+                <div class="row margin-bottom-20">
+                    <div class="col-md-6">
+                        <input type="text" id="inputeEmail" data-ng-model="formData.email" class="form-control">
+                    </div>
+                </div>
+
+                <label for="inputeMessage">Сообщение</label>
+
+                <div class="row margin-bottom-20">
+                    <div class="col-md-11 col-md-offset-0">
+                        <textarea class="form-control"  data-ng-model="formData.message" id="inputeMessage" rows="8"></textarea>
+                    </div>
+                </div>
+                <p>
+                    <button class="btn-u" type="submit">Отправить</button>
+                </p>
+            </form>
+
+        </div>
+    </div>
+</div>

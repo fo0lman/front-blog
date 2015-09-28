@@ -11,9 +11,9 @@
                     <div class="posts">
                         <div class="headline"><h2>Последние проекты</h2></div>
                         <ul class="list-unstyled latest-list">
-                            <li data-ng-repeat="project in footer.lastProjects">
+                            <li data-ng-repeat="project in footer.lastProjects | orderBy :'-date'">
                                 <a href="/projects">{{project.title | limitTo: 35}}</a>
-                                <small>{{project.tehnologies}}</small>
+                                <small>{{project.tehnologies | limitTo: 35}}</small>
                             </li>
                         </ul>
                     </div>
@@ -38,6 +38,7 @@
             </div>
         </div>
     </div>
+
     <div class="copyright">
         <div class="container">
             <div class="row">

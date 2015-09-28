@@ -34,7 +34,6 @@ class PostCtrl {
         this.authStatus = $database.getAuthStatus();
         window.scrollTo(0, 0);
 
-
         let titleArray = [];
         this.data.$loaded().then(function() {
             self.data.forEach(function(data) {

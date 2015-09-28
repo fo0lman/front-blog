@@ -1,6 +1,6 @@
 {
   "name": "FrontBlog",
-  "version": "0.4.8",
+  "version": "0.5.0",
   "description": "Blog on Angular, Webpack and es2015",
   "scripts": {
     "build": "webpack --config webpack.build.js --bail -p",

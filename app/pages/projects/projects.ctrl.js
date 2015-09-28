@@ -10,6 +10,11 @@ class ProjectsCtrl {
 
 }
 
+
+
+
+
+
 ProjectsCtrl.$inject = ['$database', '$pagetitle'];
 
 export default ProjectsCtrl;
