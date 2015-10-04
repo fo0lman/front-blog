@@ -7,6 +7,7 @@ class TagsCtrl {
         this.tag = $stateParams.tag;
         this.authStatus = this.database.getAuthStatus();
         $pagetitle.changeTitle(this.tag);
+        window.scrollTo(0, 0);
     }
     getPostCommentsLenght(postId) {
         return this.database.getPostCommentsLenght(postId);

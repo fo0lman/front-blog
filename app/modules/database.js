@@ -76,8 +76,6 @@ class Database {
         return this.firebaseArray(this.projectsRef.limitToLast(count));
     }
 
-
-
     getMessages() {
         return this.firebaseArray(this.messagessRef);
     }
@@ -90,10 +88,6 @@ class Database {
         let messagesRef = this.messagessRef.child(messageId);
         return this.firebaseObject(messagesRef);
     }
-
-
-
-
 
     authSocial(provider) {
         let self = this;
@@ -204,7 +198,8 @@ class Database {
 
 Database.$inject = ['$state', '$stateParams', '$firebaseObject', '$firebaseArray', '$firebaseAuth'];
 
-var databaseModule = angular.module('DatabaseModule', [angularfire])
+var databaseModule;
+databaseModule = angular.module('DatabaseModule', [angularfire])
     .service('$database', Database)
     .name;
 

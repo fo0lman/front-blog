@@ -5,10 +5,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../app/assets/css/gfonts.css';
 import '../app/assets/css/style.css';
 import 'font-awesome/css/font-awesome.css';
+import 'animate.css/animate.min.css'
 
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 import 'angular-i18n/angular-locale_ru-ua'
+import animate from 'angular-animate';
+
+import './templates/animate.css';
 
 import home from './pages/home/index';
 import about from './pages/about/index';
@@ -26,10 +30,12 @@ import routes from './app.config';
 import AppCtrl from './app.ctrl';
 
 import database from './modules/database.js';
+import run from './modules/run.js'
 
-var frontBlog = angular.module('FrontBlog', [uirouter, home, about, actions, contacts, projects, post, privacyPolicy, backend, search, tags, database, message])
+var frontBlog = angular.module('FrontBlog', [uirouter, animate, home, about, actions, contacts, projects, post, privacyPolicy, backend, search, tags, database, message])
     .config(routes)
     .controller('AppCtrl', AppCtrl)
+    .run(run)
     .name;
 
 export default frontBlog;

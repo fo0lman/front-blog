@@ -6,7 +6,7 @@
     </div>
 </div>
 
-<div class="row project-item margin-bottom-20" data-ng-repeat="project in projects.projects | orderBy :'-date'">
+<div class="row project-item margin-bottom-20 wow fadeIn animated" data-ng-animate="'project-item'" data-ng-repeat="project in projects.projects | orderBy :'-date'">
     <div class="col-md-6 shadow-wrapper">
         <div class="box-shadow shadow-effect-2">
             <img class="img-responsive img-bordered full-width" data-ng-src="{{project.imageUrl}}" alt="">
@@ -14,10 +14,13 @@
     </div>
     <div class="col-md-6">
         <h2>{{project.title}}</h2>
+
         <p class="text-justify">{{project.description}}</p>
         <ul class="list-unstyled">
             <li><i class="fa fa-user color-green"></i> {{project.client}}</li>
-            <li><i class="fa fa-calendar color-green"></i> {{project.date | date: 'MMMM' | fixMonth }}, {{project.date | date: 'y'}}</li>
+            <li><i class="fa fa-calendar color-green"></i> {{project.date | date: 'MMMM' | fixMonth }}, {{project.date |
+                date: 'y'}}
+            </li>
             <li><i class="fa fa-cogs color-green"></i> {{project.tehnologies}}</li>
         </ul>
         <a href="{{project.siteUrl}}" target="_blank" class="btn-u btn-u-large">ПЕРЕЙТИ</a>
@@ -25,17 +28,11 @@
 </div>
 
 
-
-
-
-
-
-
-
 <div class="row">
-    <div class="col-md-12 text-center">
+    <div class="col-md-12 text-center  wow fadeInUp animated">
         <hr>
         <h2>Больше проектов?</h2>
+
         <p>Я не буду возражать, если Вы найдете что-то полезное в моих публичных репозиториях...</p>
         <a href="https://github.com/fo0lman" target="_blank" class="btn-u">GitHub</a>
     </div>

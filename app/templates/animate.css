@@ -1,0 +1,17 @@
+.last-posts-item.ng-enter,
+.tag-item.ng-enter,
+.photo-item.ng-enter {
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -ms-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.last-posts-item.ng-leave,
+.tag-item.ng-leave,
+.photo-item.ng-leave {
+    -webkit-animation: fadeOut .7s;
+    -moz-animation: fadeOut .7s;
+    -ms-animation: fadeOut .7s;
+    animation: fadeOut .7s;
+}

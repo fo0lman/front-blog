@@ -8,9 +8,8 @@ class Pagetitle {
     }
 }
 
-//Database.$inject = [];
-
-var pagetitleModule = angular.module('PagetitleModule', [])
+var pagetitleModule;
+pagetitleModule = angular.module('PagetitleModule', [])
     .service('$pagetitle', Pagetitle)
     .name;
 

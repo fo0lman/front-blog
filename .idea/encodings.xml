@@ -6,6 +6,7 @@
     <file url="file://$PROJECT_DIR$/app/app.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/modules/database.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/modules/page-title.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/modules/run.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/pages/about/about.ctrl.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/pages/about/about.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/pages/about/index.js" charset="UTF-8" />

@@ -1,0 +1,13 @@
+.project-item.ng-enter {
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -ms-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.project-item.ng-leave {
+    -webkit-animation: fadeOut 1s;
+    -moz-animation: fadeOut 1s;
+    -ms-animation: fadeOut 1s;
+    animation: fadeOut 1s;
+}
