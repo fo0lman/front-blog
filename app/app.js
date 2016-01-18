@@ -20,7 +20,7 @@ import actions from './pages/actions/index';
 import contacts from './pages/contacts/index';
 import projects from './pages/projects/index';
 import post from './pages/post/index';
-import privacyPolicy from './pages/privacy-policy/index';
+import copyright from './pages/copyright/index';
 import backend from './pages/backend/index';
 import search from './pages/search/index';
 import tags from './pages/tags/index';
@@ -32,7 +32,7 @@ import AppCtrl from './app.ctrl';
 import database from './modules/database.js';
 import run from './modules/run.js'
 
-var frontBlog = angular.module('FrontBlog', [uirouter, animate, home, about, actions, contacts, projects, post, privacyPolicy, backend, search, tags, database, message])
+var frontBlog = angular.module('FrontBlog', [uirouter, animate, home, about, actions, contacts, projects, post, copyright, backend, search, tags, database, message])
     .config(routes)
     .controller('AppCtrl', AppCtrl)
     .run(run)

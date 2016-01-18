@@ -6,6 +6,10 @@ class ActionsCtrl {
         this.state = $state;
         this.postId = $stateParams.postId;
         this.database = $database;
+        this.ckeConfig = {
+            language: 'ru',
+            uiColor: '#000000'
+        };
 
         if (this.postId) {
             $pagetitle.changeTitle('Редактировать пост');
@@ -55,6 +59,10 @@ class ActionsCtrl {
                 self.state.go('frontblog.home');
             });
         }
+    }
+
+    ckeReady () {
+        console.log('ckEditorReady!!!');
     }
 }
 

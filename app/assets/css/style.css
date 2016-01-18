@@ -3,7 +3,7 @@
 
 body {
     color: #333;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.6;
 }
 
@@ -113,6 +113,7 @@ a:hover {
 
 .latest-list li a {
     color: #eee;
+    font-size: 13px;
 }
 
 .latest-list small {
@@ -2084,6 +2085,7 @@ UNUSED.blog-twitter .blog-twitter-inner,
 
 .footer-v1 .footer p {
     color: #eee;
+    font-size: 13px;
 }
 
 .footer-v1 .footer h2 {
@@ -2100,6 +2102,7 @@ UNUSED.blog-twitter .blog-twitter-inner,
 .footer-v1 .link-list a,
 .footer-v1 .link-list i {
     color: #eee;
+    font-size: 13px;
 }
 
 .footer-v1 address {
@@ -2127,6 +2130,7 @@ UNUSED.blog-twitter .blog-twitter-inner,
 .footer-v1 .copyright p {
     color: #eee;
     margin-top: 14px;
+    font-size: 13px;
 }
 
 .footer-v1 .copyright a {

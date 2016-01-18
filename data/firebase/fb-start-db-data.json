@@ -113,6 +113,22 @@
       "username" : "testttt"
     }
   },
+  "messages" : {
+    "-K-Kxt8n9MZ7MMbZXAB7" : {
+      "date" : 1443477522341,
+      "email" : "foolman.sy@gmail.com",
+      "message" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate distinctio, excepturi expedita magniomnis tenetur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum est ipsam perferendis tempore! Doloribus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum est ipsam perferendis tempore! Doloribus.",
+      "name" : "Сергей",
+      "readStatus" : true
+    },
+    "-K-KxziJn02nlLchVNJq" : {
+      "date" : 1443477554004,
+      "email" : "nvv@ua.fm",
+      "message" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate distinctio, excepturi expedita magniomnis tenetur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum est ipsam perferendis tempore! Doloribus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum est ipsam perferendis tempore! Doloribus.",
+      "name" : "Владимир",
+      "readStatus" : true
+    }
+  },
   "posts" : {
     "-JySSVPLcC9fLuLy6uOC" : {
       "author" : "foolman",
@@ -173,31 +189,58 @@
   },
   "projects" : {
     "-K---rkO3QkZnvsa3Bp_" : {
-      "client" : "Клиент",
-      "date" : 1443109238824,
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam assumenda dignissimos ducimus exercitationem expedita harum in officia, porro praesentium sapiente sed voluptatem! Expedita fugit itaque magnam neque quasi sint tempora totam vero voluptatibus!",
-      "imageUrl" : "assets/img/img1.jpg",
-      "siteUrl" : "https://vk.com/foolman",
-      "tehnologies" : "AngularJS, Webpack, ES2015",
-      "title" : "Новый проект"
+      "client" : "ГВУЗ ДТЕК",
+      "date" : 1388523600000,
+      "description" : "Создание официального сайта Государственного высшего учебного заведения «Днепропетровский технолого-экономический колледж» для публикации информации и новостей о колледже, в сети Интернет.",
+      "imageUrl" : "assets/img/projects/dtek.jpg",
+      "siteUrl" : "http://dtet.utel.net.ua",
+      "tehnologies" : "Design, HTML, CSS, JS, PHP, Yii",
+      "title" : "ГВУЗ ДТЕК"
     },
     "-K--05y9xr5fv3rOLl4O" : {
-      "client" : "Клиент",
-      "date" : 1443109301151,
-      "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam assumenda dignissimos ducimus exercitationem expedita harum in officia, porro praesentium sapiente sed voluptatem! Expedita fugit itaque magnam neque quasi sint tempora totam vero voluptatibus!",
-      "imageUrl" : "assets/img/img2.jpg",
-      "siteUrl" : "https://vk.com/foolman",
-      "tehnologies" : "AngularJS, Webpack, ES2015",
-      "title" : "Новый проект"
+      "client" : "Ткаченко, ФЛП",
+      "date" : 1404162000000,
+      "description" : "Создание сайта-визитки творческой мастерской фото и видеографии Александра Ткаченка.",
+      "imageUrl" : "assets/img/projects/atstudio.jpg",
+      "siteUrl" : "http://atstudio.com.ua",
+      "tehnologies" : "HTML, CSS, JS, PHP, Wordpress",
+      "title" : "ATStudio"
     },
     "-K--BnSZWQSrfSH3KPoD" : {
-      "client" : "Клиент",
-      "date" : 1443112367001,
+      "client" : "ExtremeParty",
+      "date" : 1422738000000,
+      "description" : "Верстка и программирование скриптов для нового дизайна сайта тур оператора «ExtremeParty».",
+      "imageUrl" : "assets/img/projects/extremeparty.jpg",
+      "siteUrl" : "https://github.com/fo0lman/extremeparty",
+      "tehnologies" : "HTML, CSS, JS, JQuery, Twitter Bootstrap",
+      "title" : "ExtremeParty"
+    },
+    "-K-D6GoROCmHqLox2s9I" : {
+      "client" : "Кравченко, ФЛП",
+      "date" : 1430427600000,
+      "description" : "Создание сайта-портфолио ювелирного мастера Александра Кравченка.",
+      "imageUrl" : "assets/img/projects/jeweler.jpg",
+      "siteUrl" : "https://github.com/fo0lman/jeweler",
+      "tehnologies" : "HTML, CSS, JS, JQuery, Twitter Bootstrap, OctoberCMS",
+      "title" : "Jeweler"
+    },
+    "-K-D6HAJAsloL0x2WuA9" : {
+      "client" : "Степаненко Н.А.",
+      "date" : 1438376400000,
+      "description" : "Web-приложение для контроля и отчетности личных денежных затрат. Проект учебного IT-центра «LevelUp», курс «Frontend-разработка». Проект направлен на закрепление и применение изученных на занятиях web-технологий.",
+      "imageUrl" : "assets/img/projects/fincontrol.jpg",
+      "siteUrl" : "https://fincontrol.firebaseapp.com/",
+      "tehnologies" : "HTML, CSS, JS, BackboneJS, RequireJS, HandlebarsJS, Firebase, UnderscoreJS, SASS",
+      "title" : "FinControl (in progress)"
+    },
+    "-K-D6QJv7wd4YvMfFs1s" : {
+      "client" : "Ярчук С.А.",
+      "date" : 1441054800000,
       "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam assumenda dignissimos ducimus exercitationem expedita harum in officia, porro praesentium sapiente sed voluptatem! Expedita fugit itaque magnam neque quasi sint tempora totam vero voluptatibus!",
-      "imageUrl" : "assets/img/img3.jpg",
-      "siteUrl" : "https://vk.com/foolman",
+      "imageUrl" : "assets/img/projects/frontblog.jpg",
+      "siteUrl" : "https://front-blog.firebaseapp.com",
       "tehnologies" : "AngularJS, Webpack, ES2015",
-      "title" : "Новый проект"
+      "title" : "Фронт блог (in progress)"
     }
   }
 }
